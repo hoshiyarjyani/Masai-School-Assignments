@@ -1,0 +1,64 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    }
+.div1{
+    padding: 0 0.5rem;
+    max-width: 30%;
+    margin: auto;
+    background-color: white;
+    height: 35rem;
+}
+ .banner{
+    width: 80%;
+    
+    margin-top:1rem;
+     
+ }   
+ .p1{
+    color: black;
+    font-size: 0.7rem;
+    margin-top: 2rem;
+    font-family: serif;
+    font-weight: 700;
+ }
+
+ .t1{
+    font-size: 0.6rem;
+    margin-top: 2rem;
+    font-family: serif;
+    font-weight: 400;
+ }
+
+ .p2{
+    color: black;
+    font-size: 0.7rem;
+    font-family: serif;
+    font-weight: 700;
+ }
+ th{
+    text-align: left;
+ }
+ input{
+    width: 7.5rem;
+ }
+ .t2{
+    font-size: 0.6rem;
+    font-family: serif;
+    font-weight: 400;
+ }
+ .p3{
+    color: black;
+    font-size: 0.8rem;
+    font-family: serif;
+    font-weight: 700;
+    margin-top: 2rem;
+ }
+ .ul1{
+    color: black;
+    font-size: 0.3rem;
+    font-family: serif;
+    font-weight: 600;
+    
+ }
