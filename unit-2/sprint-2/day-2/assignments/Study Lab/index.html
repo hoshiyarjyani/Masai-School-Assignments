@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Lab</title>
+    <style>
+      .nav {
+        width: 100%;
+        height: 140px;
+        display: flex;
+      }
+      .navlogo {
+        width: 50%;
+        height: 50px;
+      }
+      .navlogo-element {
+        width: 25%;
+        margin-left: 0.1rem;
+        margin-top: -2.5rem;
+      }
+      .navlogo-element img {
+        width: 100%;
+      }
+
+      .nav-element {
+        width: 50%;
+        display: flex;
+      }
+      .nav-element-child {
+        margin: 5px 22px;
+      }
+
+      .container {
+        width: 95%;
+        height: 25rem;
+        margin: auto;
+        display: flex;
+      }
+      .container-left {
+        width: 50%;
+        height: auto;
+      }
+      .container-left > .inner {
+        width: 100%;
+        display: flex;
+        height: auto;
+      }
+      .container-left > .inner > .inner-child {
+        width: 30%;
+      }
+      .container-left > .inner > .inner-child1 {
+        width: 55%;
+      }
+      .container-left > .inner img {
+        width: 80%;
+        height: auto;
+      }
+      .container-left > .inner h2 {
+        font-size: 2rem;
+      }
+      .container-right {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .container-right-child {
+        width: 40%;
+        margin-left: 3rem;
+      }
+      .container-right-child img{
+        width: 30%;
+        margin-bottom: 1rem;
+      }
+      .p1{
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #4A85FC ;
+      }
+      .p2{
+        font-size: 1rem;
+         text-align: left;
+         line-height: 2rem;
+         word-spacing: 2px;
+         color: #212121 ;
+    }
+      h1{
+        color: #333333;
+      }
+      h2{
+        font-size: 1rem;
+      }
+       .learn{
+        font-size: 1rem;
+       }
+      #left{
+        font-size: 1.1rem;
+        margin-top: 3rem;
+        color: #333333;
+      }
+      .hm{
+        color: #4A85FC ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="navlogo">
+        <div class="navlogo-element">
+          <img src="/download-removebg-preview.png" alt="" />
+        </div>
+      </div>
+      <div class="nav-element">
+        <div class="nav-element-child"><p class="hm">Home</p></div>
+        <div class="nav-element-child"><p>About</p></div>
+        <div class="nav-element-child"><p>Course</p></div>
+        <div class="nav-element-child"><p>Instructor</p></div>
+        <div class="nav-element-child"><p>Blog</p></div>
+        <div class="nav-element-child"><p>Contact</p></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container-left">
+        <p class="p1">WELCOME TO STUDYLAB</p>
+        <h1 >We Are StudyLab An Online Learning Center</h1>
+        <p class="p2">
+          A small river named Duden flows by their place and supplies it with
+          the necessary regelialia. It is a paradisematic country, in which
+          roasted parts of sentences fly into your mouth  
+          <br>
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts Separated they
+          live in Bookmarksgrove right at the coast of the Semantics, a large
+          language ocean.
+        </p>
+        <div class="inner">
+          <div class="inner-child"><img src="/1.jpg.webp" alt="" /></div>
+          <div class="inner-child1">
+            <h2 id="left">Learn anything from StudyLab, Watch video</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="container-right-child">
+            <img src="/dogger_dermatology.png" alt="">
+          <h2>Top Quality Content</h2>
+          <p>A small river named Duden flows by their place and supplies</p>
+        </div>
+        <div class="container-right-child">
+            <img src="/dogger_dryer.png" alt="">
+          <h2>Top Quality Content</h2>
+          <p>A small river named Duden flows by their place and supplies</p>
+        </div>
+        <div class="container-right-child">
+            <img src="/dogger_veterinarian.png" alt="">
+          <h2>Top Quality Content</h2>
+          <p>A small river named Duden flows by their place and supplies</p>
+        </div>
+        <div class="container-right-child">
+            <img src="/dogger_veterinary.png" alt="">
+          <h2>Top Quality Content</h2>
+          <p>A small river named Duden flows by their place and supplies</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
