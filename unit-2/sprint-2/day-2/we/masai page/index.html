@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Gallary</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav{
+            display: flex;
+            background-color: #546E7A;
+            color: white;
+            height: 80px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 15px;
+        }
+        .nav>div{
+            width: 400px;
+            display: flex;
+            justify-content: space-around;
+            margin-right: 2.5rem;
+             
+        }
+        .nav>div>div{
+         color: white;
+         font-family: serif ;
+         
+        }
+
+        .gallary{
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        .gallary>img{
+            width: 30%;
+            border-radius: 30px;
+            margin: 15px 10px;
+        }
+        .h1{
+           text-align: center;
+            width: 10%;
+           margin: 2rem 0 2rem;
+        }
+        .x{
+            text-align: center;
+           color: red;
+           font-size: 1.3rem;
+           font-family: serif;
+           margin: 3rem 0 2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img class="h1" src="/download-removebg-preview.png" alt="">
+      <div>
+        <div>HOME</div>
+        <div>GALLERY</div>
+        <div>ABOUT</div>
+      </div>
+        
+
+    </div>
+    <h1 class="x">PHOTO GALLARY</h1>
+    <div class="gallary">
+        <img src="/1.jpg.webp" alt="">
+        <img src="/1.jpg.webp" alt="">
+        <img src="/1.jpg.webp" alt="">
+        <img src="/1.jpg.webp" alt="">
+        <img src="/1.jpg.webp" alt="">
+        <img src="/1.jpg.webp" alt="">
+    </div>
+</body>
+</html>
