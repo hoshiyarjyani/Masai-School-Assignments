@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KeyBoard</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .container {
+        width: 100%;
+        height: 30rem;
+        background-color: #02bdd5;
+        padding-top: 10rem;
+      }
+      .keyboard {
+        width: 60%;
+        height: 10rem;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 15px;
+        background-color: #252626;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+      .keyboard-btn {
+        background-color: #393a3a;
+        color: #02bdd5;
+        text-align: center;
+        padding-top: 8px;
+        font-size: 0.6rem;
+        font-family: serif;
+        border-radius: 3px;
+      }
+      .keyboard-btn:hover {
+        background-color: grey;
+      }
+      .enter {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 11;
+        grid-column-end: 13;
+      }
+      .shift {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 11;
+        grid-column-end: 13;
+      }
+      .space {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 5;
+        grid-column-end: 9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="keyboard">
+        <div class="keyboard-btn">~</div>
+        <div class="keyboard-btn">1</div>
+        <div class="keyboard-btn">2</div>
+        <div class="keyboard-btn">3</div>
+        <div class="keyboard-btn">4</div>
+        <div class="keyboard-btn">5</div>
+        <div class="keyboard-btn">6</div>
+        <div class="keyboard-btn">7</div>
+        <div class="keyboard-btn">8</div>
+        <div class="keyboard-btn">9</div>
+        <div class="keyboard-btn">0</div>
+        <div class="keyboard-btn">delete</div>
+        <div class="keyboard-btn">tab</div>
+        <div class="keyboard-btn">Q</div>
+        <div class="keyboard-btn">W</div>
+        <div class="keyboard-btn">E</div>
+        <div class="keyboard-btn">R</div>
+        <div class="keyboard-btn">T</div>
+        <div class="keyboard-btn">Y</div>
+        <div class="keyboard-btn">U</div>
+        <div class="keyboard-btn">I</div>
+        <div class="keyboard-btn">O</div>
+        <div class="keyboard-btn">P</div>
+        <div class="keyboard-btn">\</div>
+        <div class="keyboard-btn">caps</div>
+        <div class="keyboard-btn">A</div>
+        <div class="keyboard-btn">S</div>
+        <div class="keyboard-btn">D</div>
+        <div class="keyboard-btn">F</div>
+        <div class="keyboard-btn">G</div>
+        <div class="keyboard-btn">H</div>
+        <div class="keyboard-btn">J</div>
+        <div class="keyboard-btn">K</div>
+        <div class="keyboard-btn">L</div>
+        <div class="keyboard-btn enter">Enter</div>
+        <div class="keyboard-btn">Shift</div>
+        <div class="keyboard-btn">Z</div>
+        <div class="keyboard-btn">X</div>
+        <div class="keyboard-btn">C</div>
+        <div class="keyboard-btn">V</div>
+        <div class="keyboard-btn">B</div>
+        <div class="keyboard-btn">N</div>
+        <div class="keyboard-btn">M</div>
+        <div class="keyboard-btn">></div>
+        <div class="keyboard-btn">></div>
+        <div class="keyboard-btn shift">Shift</div>
+        <div class="keyboard-btn">CTRL</div>
+        <div class="keyboard-btn">FN</div>
+        <div class="keyboard-btn">Win</div>
+        <div class="keyboard-btn">alt</div>
+        <div class="keyboard-btn space">Space</div>
+        <div class="keyboard-btn">alt</div>
+        <div class="keyboard-btn">option</div>
+        <div class="keyboard-btn">RIGHT</div>
+        <div class="keyboard-btn">LEFT</div>
+      </div>
+    </div>
+  </body>
+</html>
