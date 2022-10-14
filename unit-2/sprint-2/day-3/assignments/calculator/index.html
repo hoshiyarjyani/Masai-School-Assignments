@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .container {
+        margin: auto;
+        width: 25%;
+        display: grid;
+        height: auto;
+        grid-template-columns: 22% 22% 22% 22%;
+
+        gap: 1rem;
+        padding: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .container-child {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        text-align: center;
+        padding: 1rem;
+        font-weight: 800;
+        border-radius: 0.2rem;
+      }
+      .top {
+        width: 32%;
+        margin: auto;
+        color: #018080;
+        font-family: serif;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.4rem;
+      }
+      .space {
+        height: 1.7rem;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin-top: 2rem;
+      }
+      .black {
+        background-color: black;
+        color: white;
+      }
+      .red {
+        color: white;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <h1>Masai Calculator</h1>
+    </div>
+    <div class="container">
+      <div class="container-child space"></div>
+      <div class="container-child">1</div>
+      <div class="container-child">2</div>
+      <div class="container-child">3</div>
+      <div class="container-child black">+</div>
+      <div class="container-child">4</div>
+      <div class="container-child">5</div>
+      <div class="container-child">6</div>
+      <div class="container-child black">-</div>
+      <div class="container-child">7</div>
+      <div class="container-child">8</div>
+      <div class="container-child">9</div>
+      <div class="container-child black">X</div>
+      <div class="container-child red">C</div>
+      <div class="container-child">0</div>
+      <div class="container-child black">=</div>
+      <div class="container-child black">/</div>
+    </div>
+  </body>
+</html>
