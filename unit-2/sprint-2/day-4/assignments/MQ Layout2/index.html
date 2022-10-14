@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MQ Layout2</title>
+    <style>
+      .top {
+        display: grid;
+        grid-template-areas: "c1 c1" "c2 c3";
+        gap: 30px;
+        font-size: 2rem;
+      }
+      .child1 {
+        grid-area: c1;
+        background-color: yellow;
+        height: 8rem;
+        padding: 1rem;
+      }
+      .child2 {
+        grid-area: c2;
+        background-color: red;
+        height: 25rem;
+        padding: 1rem;
+      }
+
+      .child3 {
+        grid-area: c3;
+        background-color: green;
+        height: 25rem;
+        padding: 1rem;
+      }
+      @media all and (min-width: 0px) and (max-width: 700px) {
+        .top {
+          grid-template-areas: "c1" "c2" "c3";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="child1">NAVIGATION</div>
+      <div class="child2">LEFT BOX</div>
+      <div class="child3">RIGHT BOX</div>
+    </div>
+  </body>
+</html>
