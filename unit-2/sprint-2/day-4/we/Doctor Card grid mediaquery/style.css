@@ -1,0 +1,94 @@
+/* Write your styles here  */
+
+body {
+  background-color: white;
+  font-family: serif;
+}
+#header {
+  text-align: center;
+  width: 52%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.t {
+  width: 80%;
+  margin: auto;
+}
+#doctors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+#service {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  text-align: center;
+}
+#service img {
+  width: 20%;
+}
+img {
+  width: 100%;
+}
+p {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+h3 {
+  margin: 10px 0 -15px 0;
+}
+button {
+  font-size: 0.5rem;
+  font-size: 700;
+}
+.btn1 {
+  border: 0px;
+  color: rgb(39, 172, 225);
+  float: left;
+  border-radius: 17px;
+  padding: 10px 20px;
+}
+.btn2 {
+  border: 0px;
+  color: white;
+  background-color: #ff7458;
+  border-radius: 17px;
+  padding: 10px 20px;
+  float: right;
+}
+/* keep media queries at the bottom */
+/* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+  #doctors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  #service {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    text-align: center;
+  }
+}
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #doctors {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  #service {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    text-align: center;
+  }
+}
