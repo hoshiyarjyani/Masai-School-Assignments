@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .top{
+            
+            display: grid;
+            grid-template-areas: "nav nav nav nav" "box1 box2 box3 box4";
+            gap: 40px;
+            
+        }
+        .child{
+             
+        }
+        .nav{
+           grid-area: nav;
+           background-color: yellow;
+           height: 100px;
+           font-size: 3rem;
+           padding: 2rem;
+        }
+        .box1{
+            background-color: red;
+            grid-area: box1;
+            height: 300px;
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
+        .box2{
+            background-color: rgb(52, 240, 52);
+            grid-area: box2;
+            height: 300px;
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
+        .box3{
+            background-color: blue;
+            grid-area: box3;
+            height: 300px;
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
+        .box4{
+            background-color: grey;
+            grid-area: box4;
+            height: 300px;
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
+        @media all and (min-width:601px) and (max-width:900px){
+            .top{
+                grid-template-areas: "nav nav" "box1 box3" "box2 box4";
+            }
+        }
+
+        @media all and (min-width:0px) and (max-width:600px){
+            .top{
+                grid-template-areas: "nav" "box1" "box4" "box2" "box3";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="child nav">Navigation</div>
+        <div class="child box1">Box1</div>
+        <div class="child box2">Box2</div>
+        <div class="child box3">Box3</div>
+        <div class="child box4">Box4</div>
+    </div>
+</body>
+</html>
