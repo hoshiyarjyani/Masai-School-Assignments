@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit2 C2</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: serif;
+      }
+      #main{
+        width: 95%;
+        margin: auto;
+      }
+      #banner {
+        width: 100%;
+        display: flex;
+        background-color: #2e3895;
+        border-radius: 20px;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+      }
+      .b1 {
+        width: 50%;
+        margin-top: 3rem;
+      }
+      .b2 {
+        width: 30%;
+      }
+      .b1 h2 {
+        color: white;
+        margin: 5px 0;
+      }
+      .b1 p {
+        color: white;
+        margin: 10px 0;
+      }
+      button {
+        border: 1px solid white;
+        padding: 7px 10px;
+        border-radius: 15px;
+        font-family: sans-serif;
+        margin-top: 5px;
+      }
+      #banner img {
+        width: 100%;
+      }
+      /* top section complete */
+      #services {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 4rem;
+        grid-auto-rows: 400px;
+        padding: 2rem;
+      }
+      #services img {
+        width: 90%;
+        background-color: #aecfed;
+        padding: 0 1rem;
+      
+      }
+      /* middle section complete */
+      #bottom {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        grid-auto-rows: 400px;
+        padding: 2rem;
+      }
+      #bottom img {
+        width: 100%;
+      }
+      #works > h1,
+      #works > p {
+        text-align: center;
+      }
+
+      @media all and (min-width: 601px) and (max-width: 1100px) {
+        #banner {
+          flex-direction: column;
+          text-align: center;
+        }
+        .b1 {
+          width: 100%;
+          margin-top: 3rem;
+        }
+        .b2 {
+          width: 100%;
+        }
+        #banner img {
+          width: 70%;
+          margin: 1rem auto auto auto;
+        }
+        /* top section complete */
+        #services {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* middle section complete */
+
+        #bottom {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media all and (min-width: 0px) and (max-width: 600px) {
+        #banner {
+          flex-direction: column;
+          text-align: center;
+        }
+        .b1 {
+          width: 100%;
+          margin-top: 3rem;
+        }
+        .b2 {
+          width: 100%;
+        }
+        #banner img {
+          width: 70%;
+          margin: 1rem auto auto auto;
+        }
+        /* top section complete */
+        #services {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        /* middle section complete */
+        #bottom {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="banner">
+        <!-- Here should be 2 divs one for the banner heading and button and the second is for banner image -->
+        <div class="b1">
+          <h2>You are in safe hands</h2>
+          <p>Choose the experts in end to end surgical care</p>
+          <button>Know More</button>
+        </div>
+        <div class="b2">
+          <img class="img1" src="/dweb_hero_banner.webp" alt="" />
+        </div>
+      </div>
+      <div id="services">
+        <!-- Here should be 6 divs. All of them should be in a single line for large screen. For medium and large screen refer to question statement -->
+        <div>
+          <img src="/dweb_instant_video_consulation.webp" alt="" />
+          <h3>Instant Video Consultation</h3>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="/dweb_instant_video_consulation.webp" alt="" />
+          <h3>Instant Video Consultation</h3>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="/dweb_instant_video_consulation.webp" alt="" />
+          <h3>Instant Video Consultation</h3>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="/dweb_instant_video_consulation.webp" alt="" />
+          <h3>Instant Video Consultation</h3>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="/dweb_instant_video_consulation.webp" alt="" />
+          <h3>Instant Video Consultation</h3>
+          <p>Connect within 60 secs</p>
+        </div>
+        <div>
+          <img src="/dweb_instant_video_consulation.webp" alt="" />
+          <h3>Instant Video Consultation</h3>
+          <p>Connect within 60 secs</p>
+        </div>
+      </div>
+      <div id="works">
+        <h1>Book an appointment for an in-clinic consultation</h1>
+        <p>Find experienced doctors across all specialties</p>
+        <div id="bottom">
+          <!-- Here should be 8 divs. They should be in 4 colums and two rows for large screen.For medium and large screen refer to question statement -->
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+          <div>
+            <img src="/sp-dentist@2x.jpg" alt="" />
+            <h3>Dentist</h3>
+            <p>Teeth trouble? Schedule a dental checkup</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
