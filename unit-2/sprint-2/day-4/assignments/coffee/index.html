@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee</title>
+    <style>
+      .space {
+        width: 75%;
+        margin: auto;
+      }
+      .container {
+        display: grid;
+        grid-template-areas: "a b c" "d e f" "g h i";
+        gap: 40px;
+      }
+      .top {
+        box-shadow: rgba(212, 145, 97, 0.25) 0px 48px 100px 0px;
+        padding: 10px;
+      }
+      .a {
+        grid-area: a;
+      }
+      .b {
+        grid-area: b;
+      }
+      .c {
+        grid-area: c;
+      }
+      .d {
+        grid-area: d;
+      }
+      .e {
+        grid-area: e;
+      }
+      .f {
+        grid-area: f;
+      }
+      .g {
+        grid-area: g;
+      }
+      .h {
+        grid-area: h;
+      }
+      .i {
+        grid-area: i;
+      }
+      .child {
+        display: grid;
+        grid-template-areas: "x y";
+      }
+      .x {
+        grid-area: x;
+      }
+      .y {
+        grid-area: y;
+      }
+      .rate {
+        color: rgb(198, 120, 56);
+      }
+      .para {
+        color: grey;
+      }
+
+      @media all and (min-width: 601px) and (max-width: 900px) {
+        .container {
+          display: grid;
+          grid-template-areas: "a b" "c d" "e f" "g h" "i i";
+          gap: 160px;
+        }
+      }
+      @media all and (min-width: 0px) and (max-width: 600px) {
+        .container {
+          display: grid;
+          grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i";
+          gap: 160px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="space">
+      <div class="container">
+        <div class="top a">
+          <div class="child">
+            <div class="heading x"><h2>Cappuccino</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top b">
+          <div class="child">
+            <div class="heading x"><h2>Americano</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top c">
+          <div class="child">
+            <div class="heading x"><h2>Espresso</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top d">
+          <div class="child">
+            <div class="heading x"><h2>Macchiato</h2></div>
+            <div class="rate"><h2>$49</h2></div>
+          </div>
+          <div class="para y">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top e">
+          <div class="child">
+            <div class="heading x"><h2>Mocha</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top f">
+          <div class="child">
+            <div class="heading x"><h2>Coffee Latte</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top g">
+          <div class="child">
+            <div class="heading x"><h2>Piccolo Latte</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top h">
+          <div class="child">
+            <div class="heading x"><h2>Ristretto</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+        <div class="top i">
+          <div class="child">
+            <div class="heading x"><h2>Affogato</h2></div>
+            <div class="rate y"><h2>$49</h2></div>
+          </div>
+          <div class="para">
+            <p>
+              Usages of the Internat becoming more common due to rapid advance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
