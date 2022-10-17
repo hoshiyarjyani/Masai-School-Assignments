@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-111 C1 Evaluation</title>
+
+    <style>
+      body {
+        background-color: rgb(250, 250, 250);
+        font-family: serif;
+      }
+      .container {
+        width: 90%;
+        margin: 2rem auto;
+      }
+      /* top section */
+      .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .top > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 12rem);
+        gap: 1rem;
+      }
+      .top > div > div {
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        border-radius: 18px;
+      }
+      .top > div:nth-child(1) {
+        margin: 4.3rem 0 0 0;
+      }
+      .top img {
+        margin-left: 1rem;
+      }
+      .top h4 {
+        margin-left: 1rem;
+        margin-bottom: 2rem;
+      }
+      .top button {
+        background-color: #4caf4f;
+        padding: 6px 15px;
+        border: 1px solid #4caf4f;
+        border-radius: 4px;
+        color: white;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 3rem auto 0;
+        font-size: 1.7rem;
+      }
+
+      /* mid section start */
+      .mid {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+      }
+      .mid > div {
+        padding: 2rem;
+      }
+      .mid img {
+        width: 100%;
+      }
+
+      /* Bottom section  */
+      .bottom > div:nth-child(1) {
+        text-align: center;
+      }
+      .bottom > div:nth-child(1) h1 {
+        margin-bottom: 0;
+      }
+      .bottom {
+        background-color: #e5f9f5;
+      }
+      .bottom > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(3, 6rem);
+        column-gap: 9rem;
+        justify-content: center;
+        text-align: center;
+      }
+      .bottom > div:nth-child(2) p {
+        margin-top: 0;
+        font-size: 0.8rem;
+      }
+      .bottom > div:nth-child(2) h1 {
+        font-size: 9rem;
+      }
+
+      .bottom > div:nth-child(3) {
+        width: auto;
+        text-align: center;
+      }
+      .bottom > div:nth-child(3) button {
+        padding: 6px 17px;
+        color: white;
+        background-color: #00d09b;
+        border: 1px solid #00d09b;
+        border-radius: 5px;
+        margin-top: 2rem;
+        font-size: 1rem;
+      }
+
+      /* last section */
+      .info {
+        background-color: #00d09b;
+        display: flex;
+        border-radius: 15px;
+        color: white;
+        margin-top: 5rem;
+        justify-content: space-between;
+        padding: 1rem 2rem 0;
+      }
+      .info button {
+        background-color: white;
+        padding: 10px 30px;
+        color: #00d09b;
+        border: 1px solid #00d09b;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+      .info > div:nth-child(1) {
+        margin-top: 2rem;
+        width: 60%;
+      }
+      .info > div:nth-child(2) {
+        width: 40%s;
+        margin-left: 3rem;
+      }
+      .info img {
+        width: 70%;
+      }
+
+      @media screen and (min-width: 701px) and (max-width: 1000px) {
+        /* Here Write all the necessery styles for Medium Screen size  */
+
+        /* top section */
+        .top {
+          display: flex;
+          flex-direction: column;
+        }
+        .top > div:nth-child(2) {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+        }
+
+        /* mid section start */
+        .mid {
+          flex-direction: column;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+
+        /* Bottom section  */
+        .bottom > div:nth-child(2) {
+          grid-template-columns: repeat(2, 6rem);
+          column-gap: 9rem;
+        }
+        /* last section */
+
+        .info {
+          justify-content: space-between;
+          flex-direction: row;
+        }
+        .info img {
+          width: 70%;
+        }
+        .info > div:nth-child(1) {
+          margin-top: 2rem;
+          width: 40%;
+        }
+        .info > div:nth-child(2) {
+          width: auto;
+        }
+      }
+
+      @media screen and (min-width: 100px) and (max-width: 700px) {
+        /* Here Write all the necessery styles for Small Screen size  */
+
+        /* top section */
+        .top {
+          display: flex;
+          flex-direction: column;
+        }
+        /* mid section start */
+        .mid {
+          flex-direction: column;
+        }
+        h2 {
+          font-size: 1.4rem;
+        }
+
+        /* Bottom section  */
+
+        .bottom > div:nth-child(2) {
+          grid-template-columns: repeat(1, 6rem);
+        }
+        .bottom > div h1 {
+          width: 70%;
+          margin: auto;
+        }
+
+        /* last section */
+
+        .info {
+          background-color: #00d09b;
+          display: flex;
+          flex-direction: column;
+          border-radius: 15px;
+          color: white;
+          margin-top: 5rem;
+          justify-content: space-between;
+          padding: 1rem 4rem 0;
+        }
+
+        .info > div:nth-child(1) {
+          width: 100%;
+        }
+        .info > div:nth-child(2) {
+          width: 100%;
+          margin-left: 0rem;
+        }
+        .info img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top">
+        <!-- This is the top part. Here should be 2 divs(flex) and inside the second div there should be 6 more divs(Grid) -->
+        <div>
+          <h1>Invest In IPOs</h1>
+          <p>Trusted By Millions of Indians. Start Investing Today</p>
+          <button>GET STARTED</button>
+        </div>
+        <div>
+          <div>
+            <img src="/mfHome.af668dea_843325.png" alt="" />
+            <h4>Mutual Funds</h4>
+          </div>
+          <div>
+            <img src="/mfHome.af668dea_843325.png" alt="" />
+            <h4>Stocks</h4>
+          </div>
+          <div>
+            <img src="/mfHome.af668dea_843325.png" alt="" />
+            <h4>Futures & Options</h4>
+          </div>
+          <div>
+            <img src="/mfHome.af668dea_843325.png" alt="" />
+            <h4>US Stocks</h4>
+          </div>
+          <div>
+            <img src="/mfHome.af668dea_843325.png" alt="" />
+            <h4>IPOs</h4>
+          </div>
+          <div>
+            <img src="/mfHome.af668dea_843325.png" alt="" />
+            <h4>Fixed Deposits</h4>
+          </div>
+        </div>
+      </div>
+      <h2>Keep learning. Keep growing.</h2>
+      <div class="mid">
+        <!-- This is the mid part. Here you should have div where there will be 3 more divs(flex)  -->
+        <div>
+          <img src="/blog1.webp" alt="" />
+          <h3>How to Select/Pick Stocks for Intraday</h3>
+        </div>
+        <div>
+          <img src="/blog1.webp" alt="" />
+          <h3>Begaainers Guide to Mutual Funds</h3>
+        </div>
+        <div>
+          <img src="/blog1.webp" alt="" />
+          <h3>How to Diversify in the time of Market Volatility</h3>
+        </div>
+      </div>
+      <div class="bottom">
+        <!-- This is the bottom part. Here you should have div where there will be 6 more divs(Grid)  -->
+        <div>
+          <h1>Discover Mutual Funds</h1>
+          <p>Search Mutual Funds,AMCs etc.</p>
+        </div>
+        <div>
+          <div>
+            <img src="/high_returns.svg" alt="" />
+            <p>High Returns</p>
+          </div>
+          <div>
+            <img src="/high_returns.svg" alt="" />
+            <p>SIP with 500</p>
+          </div>
+          <div>
+            <img src="/high_returns.svg" alt="" />
+            <p>Tax Savings</p>
+          </div>
+          <div>
+            <img src="/high_returns.svg" alt="" />
+            <p>Large Cap</p>
+          </div>
+          <div>
+            <img src="/high_returns.svg" alt="" />
+            <p>Mid Cap</p>
+          </div>
+          <div>
+            <img src="/high_returns.svg" alt="" />
+            <p>Small Cap</p>
+          </div>
+        </div>
+        <div>
+          <button>Explore all Mutual Funds</button>
+        </div>
+      </div>
+      <div class="info">
+        <!-- Here we should have a image and a div  -->
+        <div>
+          <h1>We are with you at every step</h1>
+          <p>
+            For any query you have, find the answer quickly on our help &
+            Support.Need a little bit more help?<br />
+            We'are happy talk via call or chat.
+          </p>
+          <button>Get In Touch</button>
+        </div>
+        <div>
+          <img src="/mfSupportImg.webp" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
