@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Web20-C4</title>
+    <link rel="stylesheet" href="./Styles/index.css" />
+    <link rel="stylesheet" href="./Styles/navbar.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Masai Task List</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./dashboard.html">
+          <h2>Dashboard</h2>
+        </a>
+        <a href="./Progress.html">
+          <h2>In-Progress</h2>
+        </a>
+        <a href="./Done.html">
+          <h2>Done</h2>
+        </a>
+      </div>
+    </div>
+    <div id="create">
+      <h1>Create A Task</h1>
+      <form>
+        <input id="name" placeholder="Task Name" type="text" />
+        <input id="desc" placeholder="Description" type="text" />
+        <label for="">Start Date:-</label>
+        <input type="date" id="start" />
+        <label for="">End Date:-</label>
+        <input type="date" id="end" />
+        <select id="priority">
+          <option value="">Select Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <script src="./Scripts/index.js"></script>
+</html>
