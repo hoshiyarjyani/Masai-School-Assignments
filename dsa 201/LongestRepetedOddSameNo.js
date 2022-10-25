@@ -41,7 +41,6 @@ function myFunction(N, arr) {
   let count = 0;
   let max = -Infinity;
   for (let i = 0; i < N; i++) {
-    // 1 1 1 1 2 2 2 2 2 5 5 5
     if (
       arr[i] % 2 == 1 &&
       (arr[i - 1] == arr[i] || arr[0] == arr[i] || arr[i - 1] % 2 == 0)
