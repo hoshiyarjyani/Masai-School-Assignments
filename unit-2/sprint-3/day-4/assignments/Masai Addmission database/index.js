@@ -11,7 +11,12 @@ var email = document.querySelector("#email").value;
 var mobile = document.querySelector("#phone").value;
 var gender = document.querySelector("#gender").value;
 var course = document.querySelector("#course").value;
-var detailObj = {"name":name,"email":email,"mobile":mobile,"gender":gender,"course":course};
-detailArr.push(detailObj);
-localStorage.setItem("admission",JSON.stringify(detailArr));
+if(name == "" || email =="" || mobile == "" || gender == "" || course == ""){
+    alert("Please Enter all detals")
+}else{
+    var detailObj = {"name":name,"email":email,"mobile":mobile,"gender":gender,"course":course};
+    detailArr.push(detailObj);
+    localStorage.setItem("admission",JSON.stringify(detailArr));
+}
+
 }

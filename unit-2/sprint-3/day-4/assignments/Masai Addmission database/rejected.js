@@ -2,6 +2,7 @@
 var rejectArr = JSON.parse(localStorage.getItem("admission-rejected")) || [];
 
 function displayTable(data) {
+  
   data.forEach(function(element){
    var row = document.createElement("tr");
    var td1 = document.createElement("td");
