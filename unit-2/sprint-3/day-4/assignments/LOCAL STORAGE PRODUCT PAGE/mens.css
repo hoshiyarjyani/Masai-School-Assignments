@@ -1,0 +1,47 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.parentDiv{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.childDiv{
+    width: 20.1%;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+img{
+    width: 100%;
+}
+p{
+font-size: 1rem;
+font-weight: 800;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    color: coral;
+    display: inline-block;
+     margin: 1rem 3rem;
+}
+h1{
+ font-weight: 800;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a:hover{
+    color: rgb(247, 67, 18);
+}
+button{
+    padding: 0.8rem 5rem;
+    background-color:coral;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    border: 0px solid;
+    text-align: center;
+}
+button:hover{
+    background-color: rgb(243, 50, 50);
+}
