@@ -25,6 +25,7 @@ a{
     color: coral;
     display: inline-block;
      margin: 1rem 3rem;
+     
 }
 h1{
  font-weight: 800;
@@ -45,3 +46,41 @@ button{
 button:hover{
     background-color: rgb(243, 50, 50);
 }
+
+.cart{
+    display: flex;
+    justify-content: space-evenly;
+    width:15%;
+    margin-left: 65rem;
+    
+}
+.cartchild{
+    width: 40%;
+    color: coral;
+}
+.form{
+    width: 100%;
+    display: flex;
+}
+.form>div{
+    width: 85%;
+    margin-top: 1rem;
+}
+#apply{
+    color: coral;
+    text-align: right;
+}
+#submit{
+    padding: 0.3rem 1rem;
+    background-color:coral;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    border: 0px solid;
+    text-align: center;
+    margin-top: 1rem;
+}
+h3{
+    color: coral;
+    margin-left: 60rem;
+} 
