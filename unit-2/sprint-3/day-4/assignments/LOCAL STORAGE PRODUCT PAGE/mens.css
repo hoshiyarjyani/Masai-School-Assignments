@@ -6,6 +6,7 @@
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 6rem;
 }
 .childDiv{
     width: 20.1%;
@@ -50,8 +51,11 @@ button:hover{
 .cart{
     display: flex;
     justify-content: space-evenly;
-    width:15%;
-    margin-left: 65rem;
+    width:17%;
+    margin-left: 50rem;
+    
+
+    margin-left:65rem;
     
 }
 .cartchild{
