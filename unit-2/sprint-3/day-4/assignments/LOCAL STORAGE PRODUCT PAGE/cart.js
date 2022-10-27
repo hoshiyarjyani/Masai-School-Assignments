@@ -1,8 +1,10 @@
 let count = localStorage.getItem("countitem") || 0;
 let cartarr = JSON.parse(localStorage.getItem("cart")) || [];
 let p =1;
+
+
 function calculate(data){
-let sum = 0;
+var sum = 0;
 
 for (let i = 0; i < data.length; i++) {
   sum += +data[i].price;
@@ -23,12 +25,25 @@ function discount(event){
   }else{
     sum=sum*1;
   }
-  totel.innerText="Totel Amount = "+ sum;
+  totel.innerText="Totel Amount = "+ sum + " ₹";
+
 }
 
 let totel = document.querySelector("#totel");
-totel.innerText="Totel Amount = "+ sum;
+totel.innerText="Totel Amount = "+ sum +" ₹";
+
+
+let buy = document.querySelector("#buy");
+buy.addEventListener("click",paymentAmt);
+
+function paymentAmt(){
+  localStorage.setItem("amountTotel",JSON.stringify(sum));
 }
+
+}
+
+
+
 
 function displayItem(data) {
 
