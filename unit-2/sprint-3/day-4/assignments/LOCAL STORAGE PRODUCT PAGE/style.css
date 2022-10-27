@@ -41,7 +41,7 @@ a:hover{
     color: rgb(177, 71, 36);
 }
 button{
-    padding: 0.8rem 5rem;
+    padding: 0.8rem 4rem;
     background-color:coral;
     border-radius: 10px;
     color: white;
@@ -53,20 +53,23 @@ button:hover{
     background-color: rgb(243, 50, 50);
 }
 
+
+
 .cart{
     display: flex;
-    justify-content: space-evenly;
-    width:25%;
-    margin-left: 50rem;
+    justify-content: space-between;
+    width:15%;
+    
     position: sticky;
+    margin-left: 58rem;
     top:0.7rem;
     background-color: white;
 font-size: 1.6rem;
-    margin-left:58rem;
+   
     
 }
 .cartchild{
-    width: 40%;
+    width: auto;
     color: coral;
 }
 .form{
@@ -90,18 +93,23 @@ h2{
     color: coral;
 }
 .main{
-    margin-left: 57rem;
+    margin-left: 30rem;
     width: 50%;
+    display:flex;
+    flex-direction: column;
 }
 #promobtn{
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 0.5rem;
     background-color:coral;
     border-radius: 10px;
     color: white;
-    font-weight: 800;
+    font-weight: 700;
     border: 0px solid;
     text-align: center;
     margin-top: 1rem;
+    width: 50%;
+    margin:1rem auto auto;
+    text-align: center;
 }
 
 .pform{
@@ -155,4 +163,7 @@ text-align: center;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 padding: 2rem;
 height: 24rem;
+}
+#promo{
+    height: 3rem;
 }
