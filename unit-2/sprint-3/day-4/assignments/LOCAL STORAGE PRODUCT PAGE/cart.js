@@ -39,7 +39,7 @@ buy.addEventListener("click",paymentAmt);
 function paymentAmt(){
   localStorage.setItem("amountTotel",JSON.stringify(sum));
 }
-
+  
 }
 
 
