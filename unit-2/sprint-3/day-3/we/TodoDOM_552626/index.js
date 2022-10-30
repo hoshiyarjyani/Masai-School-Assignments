@@ -15,6 +15,7 @@ function myTodo(event) {
   todoArr.push(taskobj);
 
   localStorage.setItem("todo", JSON.stringify(todoArr));
+  
 
   displayTable(todoArr);
 }
@@ -26,6 +27,7 @@ function displayTable(todoArr) {
     let td1 = document.createElement("td");
     td1.innerText = todoArr[i].taskName;
 
+    
     let td2 = document.createElement("td");
     td2.innerText = todoArr[i].taskPriority;
     if (todoArr[i].taskPriority == "High") {

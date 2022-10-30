@@ -1,6 +1,6 @@
 // Write code related to Home page here
 let dataArr = JSON.parse(localStorage.getItem("task-list")) || [];
-document.querySelector("form").addEventListener("submit", addData);
+ss
 function addData() {
   let name = document.querySelector("#name").value;
   let desc = document.querySelector("#desc").value;
