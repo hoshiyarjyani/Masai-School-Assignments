@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="script/style.css">
+  </head>
+  <body>
+    <div id="nav">
+      <h1>Masai Todo App</h1>
+      <a href="./index.html">Home Page</a>
+      <a href="./completed.html">Completed Tasks</a>
+      <a href="./favourites.html">Favourites</a>
+    </div>
+    <div id="create">
+        <h1>Create a New Task</h1>
+      <form>
+        <!-- Use this form for data input  -->
+        <input type="text" id="name" placeholder="Task Name" /><br>
+        <select id="type"><br>
+          <option value="">Select Task Type</option>
+          <option value="Assignment">Assignment</option>
+          <option value="Evaluation">Evaluation</option>
+          <option value="Quiz">Quiz</option>
+        </select><br>
+        <label for="">Date:- </label><br>
+        <input type="date" id="date" /><br>
+        <select id="priority"><br>
+          <option value="">Select Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="Urgent">Urgent</option>
+        </select><br>
+        <input type="submit" value="Submit" /><br>
+      </form>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Task Type</th>
+          <th>Completion Date</th>
+          <th>Priority</th>
+          <th>Mark As Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Append the elements here using JS and DOM  -->
+      </tbody>
+    </table>
+  </body>
+  <script src="./script/index.js"></script>
+</html>
