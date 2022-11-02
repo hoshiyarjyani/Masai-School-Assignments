@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide Show</title>
+    <style>
+      img {
+        width: 50%;
+      }
+      button {
+        padding: 4rem;
+        border-radius:15px;
+        border: 1px solid skyblue;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="start">Start</button>
+    <img id="img" src="" alt="" />
+    <button class="stop">stop</button>
+  </body>
+  <script>
+    var pics = [
+      "https://www.oecd.org/media/oecdorg/directorates/directorateforsciencetechnologyandindustry/digital/digital-economy-outlook-2020_slider.jpg",
+      "https://www.adb.org/sites/default/files/styles/content_media/public/content-media/120386-aeir-2021-photo-final.jpg?itok=sKZ_I3tq",
+      "https://media.istockphoto.com/photos/man-using-mobile-smart-phone-with-global-network-connection-and-picture-id1274394138?k=20&m=1274394138&s=612x612&w=0&h=RoaYIwoPE2OLroJgmHLl2cRctm2Ey_jHfbw1v5BkC8g=",
+      "https://imageio.forbes.com/specials-images/imageserve/5d9231058b5ffa0006556d13/Digital-transformation-technology-strategy--digitization-and-digitalization-of/960x0.jpg?format=jpg&width=960",
+      "https://enterprisersproject.com/sites/default/files/images/cio_digital_transformation_resource.jpg",
+      "https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688?k=20&m=517188688&s=612x612&w=0&h=i38qBm2P-6V4vZVEaMy_TaTEaoCMkYhvLCysE7yJQ5Q=",
+      "https://media.istockphoto.com/photos/mountain-landscape-picture-id1170655400?k=20&m=1170655400&s=612x612&w=0&h=Cz9OZXmfgtjEb-0yAkSG1j_Yb182jlUfuTuuia3LGQQ=",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNHZmZId1rOXzAtCIHHcC3jsBujWYs1_DdE_NuBLUIDhAtnwKwr9kdbNeGH--rEsqmbDc&usqp=CAU",
+      "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2021/02/fine-art-landscape-photography-1003.jpg?fit=1458%2C969&ssl=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLCKxVOtqXfPIASAw7ihclaVRopETl269xGmQ4SiN9EeajtWJHEs2b6yUWK1K7YgdaBrI&usqp=CAU",
+      "https://img.freepik.com/free-photo/breathtaking-shot-beautiful-stones-turquoise-water-lake-hills-background_181624-12847.jpg?w=2000",
+      "https://i.pinimg.com/474x/59/19/59/5919598016365c7fc6bba9fff9885478.jpg",
+    ];
+
+    document.querySelector("#start").addEventListener("click", show);
+
+    var x;
+
+    function show() {
+      x = setInterval(display, 1000);
+    }
+    var count = 0;
+    function display() {
+      document.querySelector("#img").src = pics[count];
+      count++;
+      if (count >= 11) {
+        count = 0;
+      }
+    }
+
+    document.querySelector(".stop").addEventListener("click", stop);
+    function stop() {
+      clearInterval(x);
+    }
+  </script>
+</html>
