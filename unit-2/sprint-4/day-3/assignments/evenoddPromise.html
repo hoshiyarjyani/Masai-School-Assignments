@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>even odd promise</title>
+  </head>
+  <body></body>
+
+  <script>
+    diffno(21);
+    diffno(20);
+    diffno(120);
+    function diffno(no) {
+      let promise = new Promise(function (resolve, reject) {
+        if (no % 2 == 0) {
+          resolve("Even No");
+        } else {
+          reject("Odd No");
+        }
+      });
+      promise
+        .then(function (val) {
+          console.log(val);
+        })
+        .catch(function (val) {
+          console.log(val);
+        });
+      console.log(promise);
+    }
+  </script>
+</html>
