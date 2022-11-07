@@ -115,64 +115,72 @@ iframe {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-h2{
-    margin-bottom: 1rem;
+h2 {
+  margin-bottom: 1rem;
 }
 @media only screen and (max-width: 1200px) {
-  
-      #forcast {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-      }
-      #forcast > div {
-        width: 20%;
-        padding: 1rem;
-        text-align: center;
-        font-size: 8px;
-        margin-top: 5px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-          rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-      }
+  #forcast {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
+  #forcast > div {
+    width: 20%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 8px;
+    margin-top: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+}
 
 @media only screen and (max-width: 900px) {
-    #main {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100%;
-        margin: auto;
-      }
-      #weather {
-        width: 80%;
-        padding: 10px;
-        text-align: center;
-        margin-left: 1rem;
-      }
-      #maps {
-        width: 80%;
-        padding: 10px;
-      }
-      #forcast {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-      }
-      #forcast > div {
-        width: 28%;
-        padding: 1rem;
-        text-align: center;
-        font-size: 8px;
-        margin-top: 5px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-          rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-      }
-      .socialicon {
-        margin: 15px 8px;
-        color: rgb(30, 29, 28);
-      }
+  #main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
   }
-  
+  #weather {
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 1rem;
+  }
+  #maps {
+    width: 80%;
+    padding: 10px;
+  }
+  #forcast {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  #forcast > div {
+    width: 24%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 8px;
+    margin-top: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  .socialicon {
+    margin: 15px 8px;
+    color: rgb(30, 29, 28);
+  }
+  #map{
+    width: 100%;
+  }
+  .mapouter{
+    margin-left: 1rem;
+  }
+  button{
+    padding: 5px 15px;
+    font-size: 10px;
+  }
+}

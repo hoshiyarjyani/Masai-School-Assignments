@@ -50,10 +50,12 @@ document.querySelector("button").addEventListener("click", function () {
 
   //5day api close here
 });
+// for time and wether update after one sec.
 
 function start() {
   setInterval(dateFun, 1000);
 }
+
 
 function dateFun() {
   displayData(storedata);
