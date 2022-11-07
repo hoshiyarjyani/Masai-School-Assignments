@@ -4,138 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/2275.png" type="image/x-icon">
-    <title>Weather-2</title>
+    <link rel="shortcut icon" href="/images.png" type="image/x-icon" />
+    <title>Weather App -JYANI</title>
+    <link rel="stylesheet" href="/style.css" />
     <script
-    defer
-    src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
-  ></script>
-    <style>
-      * {
-        margin: 0;
-      }
-      #one {
-       
-        height: 10rem;
-      }
-      #nav {
-        display: flex;
-        justify-content: space-between;
-        width: 82%;
-        margin: auto;
-      }
-      #main {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        margin: auto;
-      }
-      #weather {
-        width: 50%;
-        padding: 10px;
-    
-      }
-      #maps {
-        width: 40%;
-        padding: 10px;
-      }
-      button {
-        color: white;
-        background-color: black;
-        border-radius: 25px;
-        padding: 10px 50px;
-        font-weight: 700;
-        border: 0px solid;
-        margin-top: 2rem;
-      }
-      input {
-        width: 50rem;
-        margin-top: 2rem;
-        border-radius: 55px;
-        border: 0px solid #ff0000;
-        padding: 5px 35px;
-      }
-      button:hover {
-        background-color: white;
-        color: black;
-        border: 1px solid;
-    
-      }
-      .intro {
-        text-align: center;
-        color:rgb(26, 4, 126);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 2rem;
-        padding-top: 2rem;
-        word-spacing: 10px;
-      }
-    
-      video#vid {
- position: fixed; right: 0; bottom: 0;
- min-width: 100%; min-height: 100%;
- width: auto; height: auto; z-index: -100;
- background: url(polina.jpg) no-repeat;
- background-size: cover;
- margin: 0 auto;
-}
-
-iframe{
-    border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-}
-.mapdes{
-    text-align: center;
-    margin-bottom: 1rem ;
-    color: white;
-    margin-right: 4rem;
-
-}
-#forcast{
-  display: flex;
- width: 100%;
- justify-content: space-evenly;
- flex-wrap: wrap;
-}
-#forcast>div{
-  width: 9%;
-  padding: 1rem;
-  text-align: center;
-  font-size: 8px;
-  margin-top: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
-
-
-
-#footer{
-    text-align: center;
-    padding: 1% 15%;
-  }
-
-  .socialicon{
-    margin: 15px 18px;
-    color: rgb(30, 29, 28);
-  }
-   
-  .socialicon:hover{
-    color: rgb(250, 0, 0);
-  }
-  .copyright{
-    margin-top:0.2rem;
-    font-family:'Montserrat';
-    font-weight: 200;
-    color: rgb(37, 35, 35);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-    </style>
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+    ></script>
   </head>
-  <body>
+  <body onload="Defaultvalue()">
     <video autoplay loop poster="polina.jpg" id="vid">
-        <source src="/ForcefulSpiffyAppaloosa-mobile.mp4" type="video/webm">
-        </video>
+      <source src="/ForcefulSpiffyAppaloosa-mobile.mp4" type="video/webm" />
+    </video>
     <section id="one">
-      <h1 class="intro">  WEATHER  of  Your  City</h1>
-      
+      <h1 class="intro">WEATHER of Your City</h1>
+
       <div id="nav">
         <input
           type="text"
@@ -184,20 +67,37 @@ iframe{
       </div>
     </div>
     <h1 class="intro">Forecast Weather</h1>
-    <div id="forcast">
-       
-    </div>
+    <div id="forcast"></div>
     <footer id="footer">
-       
-        <a  href="https://github.com/hoshiyarjyani" target="_blank"><i  class="fab fa-github socialicon"></i></a>
-        <a  href="https://www.linkedin.com/in/hoshiyar-jyani-867ab5164/" target="_blank"><i class="fab fa-linkedin socialicon"  ></i></a>
-        <a  href="https://www.youtube.com/channel/UC_EeYv0z-8nvrDSzP6dpaVg" target="_blank"><i class="fab fa-youtube socialicon "  ></i></a>
-        <a  href="https://www.instagram.com/Hoshiyarjyaniofficial/" target="_blank"><i class="fab fa-instagram socialicon"  ></i></a>
-        <a  href="https://www.facebook.com/hoshiyarsinghjyani1999" target="_blank"><i class="fab fa-facebook socialicon"  ></i></a>
-        <a  href="https://twitter.com/Hoshiyarjyani" target="_blank"><i class="fab fa-twitter socialicon"  ></i></a>
-        <a  href="https://t.me/Hoshiyarjyani/" target="_blank"><i class="fab fa-telegram socialicon"  ></i></a>
-        <a  href="https://wa.me/+919664485996" target="_blank"><i class="fab fa-whatsapp socialicon"  ></i></a>
-       
+      <a href="https://github.com/hoshiyarjyani" target="_blank"
+        ><i class="fab fa-github socialicon"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/hoshiyar-jyani-867ab5164/"
+        target="_blank"
+        ><i class="fab fa-linkedin socialicon"></i
+      ></a>
+      <a
+        href="https://www.youtube.com/channel/UC_EeYv0z-8nvrDSzP6dpaVg"
+        target="_blank"
+        ><i class="fab fa-youtube socialicon"></i
+      ></a>
+      <a href="https://www.instagram.com/Hoshiyarjyaniofficial/" target="_blank"
+        ><i class="fab fa-instagram socialicon"></i
+      ></a>
+      <a href="https://www.facebook.com/hoshiyarsinghjyani1999" target="_blank"
+        ><i class="fab fa-facebook socialicon"></i
+      ></a>
+      <a href="https://twitter.com/Hoshiyarjyani" target="_blank"
+        ><i class="fab fa-twitter socialicon"></i
+      ></a>
+      <a href="https://t.me/Hoshiyarjyani/" target="_blank"
+        ><i class="fab fa-telegram socialicon"></i
+      ></a>
+      <a href="https://wa.me/+919664485996" target="_blank"
+        ><i class="fab fa-whatsapp socialicon"></i
+      ></a>
+
       <p class="copyright">© Copyright HoshiyarJyaniOfficial</p>
     </footer>
   </body>

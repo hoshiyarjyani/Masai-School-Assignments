@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+}
+#one {
+  height: 10rem;
+}
+#nav {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  margin: auto;
+}
+#main {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+}
+#weather {
+  width: 50%;
+  padding: 10px;
+}
+#maps {
+  width: 40%;
+  padding: 10px;
+}
+button {
+  color: white;
+  background-color: black;
+  border-radius: 25px;
+  padding: 10px 50px;
+  font-weight: 700;
+  border: 0px solid;
+  margin-top: 2rem;
+}
+input {
+  width: 50rem;
+  margin-top: 2rem;
+  border-radius: 55px;
+  border: 0px solid #ff0000;
+  padding: 5px 35px;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid;
+}
+.intro {
+  text-align: center;
+  color: rgb(26, 4, 126);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+  padding-top: 2rem;
+  word-spacing: 10px;
+}
+
+video#vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+iframe {
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.mapdes {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+  margin-right: 4rem;
+}
+#forcast {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#forcast > div {
+  width: 9%;
+  padding: 1rem;
+  text-align: center;
+  font-size: 8px;
+  margin-top: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+#footer {
+  text-align: center;
+  padding: 1% 15%;
+}
+
+.socialicon {
+  margin: 15px 18px;
+  color: rgb(30, 29, 28);
+}
+
+.socialicon:hover {
+  color: rgb(250, 0, 0);
+}
+.copyright {
+  margin-top: 0.2rem;
+  font-family: "Montserrat";
+  font-weight: 200;
+  color: rgb(37, 35, 35);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h2{
+    margin-bottom: 1rem;
+}
+@media only screen and (max-width: 1200px) {
+  
+      #forcast {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      #forcast > div {
+        width: 20%;
+        padding: 1rem;
+        text-align: center;
+        font-size: 8px;
+        margin-top: 5px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+          rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      }
+  }
+
+@media only screen and (max-width: 900px) {
+    #main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+      }
+      #weather {
+        width: 80%;
+        padding: 10px;
+        text-align: center;
+        margin-left: 1rem;
+      }
+      #maps {
+        width: 80%;
+        padding: 10px;
+      }
+      #forcast {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      #forcast > div {
+        width: 28%;
+        padding: 1rem;
+        text-align: center;
+        font-size: 8px;
+        margin-top: 5px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+          rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      }
+      .socialicon {
+        margin: 15px 8px;
+        color: rgb(30, 29, 28);
+      }
+  }
+  

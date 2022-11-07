@@ -14,14 +14,14 @@ document.querySelector("button").addEventListener("click", function () {
     "&units=metric&lang=hi&appid=d7deec0a77b8170d9cb82bbd7d05f7a7";
 
   // weather data featching
-    fetch(url)
+  fetch(url)
     .then((res) => res.json())
     .then((data) => {
       storedata = data;
       console.log(data);
       displayData(data);
 
-  // map url of particular city
+      // map url of particular city
       let map = document.querySelector("#gmap_canvas");
       map.src =
         "https://maps.google.com/maps?q=" +
@@ -32,29 +32,23 @@ document.querySelector("button").addEventListener("click", function () {
 
   start();
 
+  //5day api here start
 
-//5day api here start
+  var fiveday =
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    city +
+    "&lang=hi&units=metric&appid=32ba0bfed592484379e51106cef3f204";
 
+  fetch(fiveday)
+    .then((reso) => reso.json())
+    .then((datas) => {
+      forcastDatashow(datas);
+      console.log(datas);
+    })
+    .catch((err) => alert(err + " forcast wali error aagyi"));
+  console.log(five);
 
-
-var fiveday = "https://api.openweathermap.org/data/2.5/forecast?q="+city+"&lang=hi&units=metric&appid=32ba0bfed592484379e51106cef3f204";
-
-fetch(fiveday)
-.then((reso) => reso.json())
-.then((datas) => {
-  forcastDatashow(datas);
-  console.log(datas);
-}).catch((err) => alert(err+" forcast wali error aagyi"));
-console.log(five);
-
-
-
-//5day api close here
-
-
-
-
-
+  //5day api close here
 });
 
 function start() {
@@ -146,66 +140,125 @@ function displayData(data) {
   );
 }
 
-
 ////////////////////////////forcast weather ///////////////////////////
 
+function forcastDatashow(datas) {
+  let forcastdiv = document.querySelector("#forcast");
+  forcastdiv.innerHTML = "";
+  for (let i = 0; i < datas.list.length; i++) {
+    // document.querySelector("#forcast").innerHTML = "";
 
+    var Fdiv = document.createElement("div");
 
+    var Fname = document.createElement("h5");
+    Fname.innerText = datas.city.name;
 
-function forcastDatashow(datas){
-let forcastdiv=document.querySelector("#forcast");
+    var Udate = document.createElement("h5");
+    Udate.innerText = "( " + datas.list[i].dt_txt + " )";
 
-for(let i = 0; i<datas.list.length;i++){
+    var Ficon =
+      "http://openweathermap.org/img/w/" +
+      datas.list[i].weather[0].icon +
+      ".png";
+    var Fimage = document.createElement("img");
+    Fimage.src = Ficon;
 
-  // document.querySelector("#forcast").innerHTML = "";
+    var Ftemper = document.createElement("h4");
+    Ftemper.innerText = "Temp -  " + datas.list[i].main.temp + " C";
 
-  var Fdiv = document.createElement("div");
+    var Ffeel = document.createElement("h5");
+    Ffeel.innerText =
+      "Temp Feel Like -  " + datas.list[i].main.feels_like + " C";
 
-  var Fname = document.createElement("p");
-  Fname.innerText = datas.city.name;
+    var Fmax = document.createElement("h5");
+    Fmax.innerText = "Max Temp. -  " + datas.list[i].main.temp_max + " C";
 
-  var Udate = document.createElement("p");
-  Udate.innerText = "( " + datas.list[i].dt_txt + " )";
+    var Fmin = document.createElement("h5");
+    Fmin.innerText = "Min Temp. -  " + datas.list[i].main.temp_min + " C";
 
+    var Fhumi = document.createElement("h5");
+    Fhumi.innerText = "Humidity -  " + datas.list[i].main.humidity;
 
-  var Ficon = "http://openweathermap.org/img/w/" + datas.list[i].weather[0].icon + ".png";
-  var Fimage = document.createElement("img");
-  Fimage.src = Ficon;
+    var Fcloud = document.createElement("h5");
+    Fcloud.innerText = "Cloud -  " + datas.list[i].weather[0].description;
 
-  var Ftemper = document.createElement("h4");
-  Ftemper.innerText = "Temp -  " + datas.list[i].main.temp + " C";
+    var Fpress = document.createElement("h5");
+    Fpress.innerText = "Pressure -  " + datas.list[i].main.pressure + " mbar";
 
-  var Ffeel = document.createElement("p");
-  Ffeel.innerText = "Temp Feel Like -  " + datas.list[i].main.feels_like + " C";
+    let srf = datas.city.sunrise;
+    let c = new Date(srf * 1000).toLocaleTimeString();
+    var Fsunrise = document.createElement("h5");
+    Fsunrise.innerText = "Sunrise Time -  " + c;
 
-  var Fmax = document.createElement("p");
-  Fmax.innerText = "Max Temp. -  " + datas.list[i].main.temp_max + " C";
+    let ssf = datas.city.sunset;
+    let d = new Date(ssf * 1000).toLocaleTimeString();
+    var Fsunset = document.createElement("h5");
+    Fsunset.innerText = "Sunset Time -  " + d;
 
-  var Fmin = document.createElement("p");
-  Fmin.innerText = "Min Temp. -  " + datas.list[i].main.temp_min + " C";
-
-  var Fhumi = document.createElement("p");
-  Fhumi.innerText = "Humidity -  " + datas.list[i].main.humidity;
-
-  var Fcloud = document.createElement("p");
-  Fcloud.innerText = "Cloud -  " + datas.list[i].weather[0].description;
-
-  var Fpress = document.createElement("p");
-  Fpress.innerText = "Pressure -  " + datas.list[i].main.pressure + " mbar";
-
-  let srf = datas.city.sunrise;
-  let c = new Date(srf * 1000).toLocaleTimeString();
-  var Fsunrise = document.createElement("p");
-  Fsunrise.innerText = "Sunrise Time -  " + c;
-
-  let ssf = datas.city.sunset;
-  let d = new Date(ssf * 1000).toLocaleTimeString();
-  var Fsunset = document.createElement("p");
-  Fsunset.innerText = "Sunset Time -  " + d;
-
-  Fdiv.append(Fname,Udate,Fimage,Ftemper,Ffeel,Fmax,Fmin,Fhumi,Fcloud,Fpress,Fsunrise,Fsunset);
-  forcastdiv.append(Fdiv);
+    Fdiv.append(
+      Fname,
+      Udate,
+      Fimage,
+      Ftemper,
+      Ffeel,
+      Fmax,
+      Fmin,
+      Fhumi,
+      Fcloud,
+      Fpress,
+      Fsunrise,
+      Fsunset
+    );
+    forcastdiv.append(Fdiv);
+  }
 }
 
-}
+function Defaultvalue() {
+  document.querySelector("#input").value = "new delhi";
 
+  city = document.querySelector("#input").value;
+
+  // weather url
+
+  var url =
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    city +
+    "&units=metric&lang=hi&appid=d7deec0a77b8170d9cb82bbd7d05f7a7";
+
+  // weather data featching
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      storedata = data;
+      console.log(data);
+      displayData(data);
+
+      // map url of particular city
+      let map = document.querySelector("#gmap_canvas");
+      map.src =
+        "https://maps.google.com/maps?q=" +
+        city +
+        "&t=&z=13&ie=UTF8&iwloc=&output=embed";
+    })
+    .catch((err) => alert("CITY NOT FOUND...TRY AGAIN"));
+
+  start();
+
+  //5day api here start
+
+  var fiveday =
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    city +
+    "&lang=hi&units=metric&appid=32ba0bfed592484379e51106cef3f204";
+
+  fetch(fiveday)
+    .then((reso) => reso.json())
+    .then((datas) => {
+      forcastDatashow(datas);
+      console.log(datas);
+    })
+    .catch((err) => alert(err + " forcast wali error aagyi"));
+  console.log(five);
+
+  //5day api close here
+}
