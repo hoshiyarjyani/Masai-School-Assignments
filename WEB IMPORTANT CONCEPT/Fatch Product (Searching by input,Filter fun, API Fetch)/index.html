@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <style>
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: auto;
+        justify-content: space-evenly;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 21%;
+        padding: 1rem;
+      }
+      img {
+        width: 50%;
+      }
+      p {
+        font-size: 12px;
+      }
+      @media only screen and (max-width: 600px) {
+        #container > div {
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          width: 48%;
+          padding: 1rem;
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        #container > div {
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          width: 30%;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      oninput="search()"
+      type="text"
+      placeholder="Search The Products"
+      id="search"
+    />
+    <select name="" onchange="handlesort()" id="">
+      <option value="HTL">HTL</option>
+      <option value="LTH">LTH</option>
+    </select>
+    <form action="/cart.html">
+      <input type="submit" value="GO TO CART" />
+    </form>
+
+    <div id="container"></div>
+  </body>
+  <script src="/index.js"></script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <style>
+      #main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: coral;
+      }
+      #main > div {
+        background-color: white;
+        padding: 1rem;
+        margin: 3rem;
+      }
+      button {
+        border-radius: 10px;
+        border: 0px solid;
+        padding: 8px 30px;
+        text-align: center;
+        background-color: cornflowerblue;
+        color: white;
+        margin: 1rem 1.5rem;
+      }
+      button:hover {
+        background-color: blue;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+      }
+      .box {
+        width: 60%;
+        margin: auto;
+        background-color: coral;
+        height: 25rem;
+        text-align: center;
+        font-family: serif;
+      }
+      h1 {
+        color: white;
+        margin-top: 4rem;
+        padding-top: 4rem;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Timer By Hoshiyar Jyani</h1>
+      <div id="main">
+        <span>Hour-</span>
+        <div id="hour"></div>
+        <span>Min-</span>
+        <div id="min"></div>
+        <span>Sec-</span>
+        <div id="sec">00</div>
+        <span>MiliSec-</span>
+        <div id="Msec">00</div>
+      </div>
+      <div class="btn">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    var sec = document.querySelector("#sec");
+    var min = document.querySelector("#min");
+    var hour = document.querySelector("#hour");
+
+    document.querySelector("#start").addEventListener("click", start);
+    document.querySelector("#stop").addEventListener("click", stop);
+    document.querySelector("#reset").addEventListener("click", reset);
+    var Mscount = 0;
+    var Scount = 0;
+    var Mcount = 0;
+    var Hcount = 0;
+    var x;
+    function start() {
+      if (x) {
+        clearInterval(x, 1000);
+      }
+      x = setInterval(timer, 10);
+    }
+
+    function stop() {
+      clearInterval(x);
+    }
+    function reset() {
+      clearInterval(x);
+      hour.innerText = " ";
+      min.innerText = " ";
+      sec.innerText = "00";
+      Msec.innerText = "00";
+      Mscount = 0;
+      Scount = 0;
+      Mcount = 0;
+      Hcount = 0;
+    }
+
+    function timer() {
+      Mscount++;
+      Msec.innerText = Mscount;
+
+      if (Mscount > 100) {
+        Mscount = 0;
+        Scount++;
+        sec.innerText = Scount;
+      }
+      if (Scount > 59) {
+        Scount = 0;
+        Mcount++;
+        min.innerText = Mcount;
+      }
+      if (Mcount > 59) {
+        Mcount = 0;
+        Hcount++;
+        hour.innerText = Hcount;
+      }
+    }
+  </script>
+</html>

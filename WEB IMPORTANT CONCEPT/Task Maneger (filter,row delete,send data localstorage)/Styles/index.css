@@ -1,0 +1,42 @@
+/* Write css related to the Home page here  */
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#navbar>h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+}
+#navbar > div{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: coral;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+h1{
+    text-align: center;
+}
+
+#create{
+    width: 40%;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#create form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin-bottom: 2rem;
+}
+select{
+    margin-bottom: 1rem;
+}

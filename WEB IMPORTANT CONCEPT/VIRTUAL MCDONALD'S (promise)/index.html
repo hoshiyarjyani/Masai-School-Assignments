@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCDONALD'S</title>
+    <style>
+      #peti {
+        width: 20%;
+      }
+      #coca {
+        width: 20%;
+      }
+      div {
+        position: absolute;
+        top: 1px;
+        right: 1rem;
+        text-decoration: underline;
+      }
+      * {
+        background-color: rgb(159, 152, 150);
+        text-align: center;
+      }
+      button {
+        padding: 0.7rem 2rem;
+        border: 0px solid;
+        border-radius: 10px;
+        background-color: rgb(29, 237, 64);
+        color: white;
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Order Id</div>
+    <h1>Vartual MCDONALD</h1>
+    <img src="" id="bur" alt="" />
+    <img src="" id="coca" alt="" />
+    <img src="" id="peti" alt="" />
+    <form>
+      <input type="checkbox" id="burger" name="burger" value="burger" />
+      <label for="burger"> Cheese burger</label><br />
+      <input
+        type="checkbox"
+        id="colddrink"
+        name="colddrink"
+        value="colddrink"
+      />
+      <label for="colddrink">CocaCola 1ltr</label><br />
+      <input type="checkbox" id="petiz" name="petiz" value="petiz" />
+      <label for="petiz">Cheese Petiz</label><br /><br />
+    </form>
+    <button onclick="start()">Order Now</button>
+  </body>
+
+  <script>
+    var arr = [
+      "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/njyjtca1n9apfdv8su7n",
+      "https://5.imimg.com/data5/EQ/UU/IR/SELLER-107310956/1l-coca-cola-cold-drink-500x500.jpg",
+      "https://pbs.twimg.com/media/FIvfq4IVQAIZ6ae.jpg",
+    ];
+
+    let img1 = document.querySelector("#bur");
+    let img2 = document.querySelector("#coca");
+    let img3 = document.querySelector("#peti");
+
+    let burger = document.querySelector("#burger");
+    let cocacola = document.querySelector("#colddrink");
+    let petiz = document.querySelector("#petiz");
+    var sec = Math.floor(Math.random() * 10);
+
+    let promise = new Promise(function (resolve, reject) {
+      resolve(sec);
+    });
+    promise.then(function (res) {
+      console.log("Please Wait your Order is ready in " + sec + " sec.");
+    });
+
+    function start() {
+      alert("Please Wait your Order is ready in " + sec + " sec.");
+      setTimeout(orderFood, sec * 1000);
+    }
+
+    function orderFood() {
+      if (
+        burger.checked == true ||
+        cocacola.checked == true ||
+        petiz.checked == true
+      ) {
+        document.querySelector("div").innerText =
+          "Thanks For Order! Your Order Id - " + sec * 35;
+        document.querySelector("h1").innerText = "Your Order is Ready.";
+        img1.src = "";
+        img2.src = "";
+        img3.src = "";
+        if (burger.checked == true) {
+          img1.src = arr[0];
+        }
+        if (cocacola.checked == true) {
+          img2.src = arr[1];
+        }
+        if (petiz.checked == true) {
+          img3.src = arr[2];
+        }
+      } else {
+        alert("Please Select the iteams");
+      }
+    }
+  </script>
+</html>

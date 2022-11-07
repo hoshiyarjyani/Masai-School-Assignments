@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <style>
+      #clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: coral;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #clock > div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 30px;
+        margin: 30px;
+        background-color: white;
+        border-radius: 0.5rem;
+      }
+    
+    </style>
+  </head>
+  <body>
+    
+    <div id="clock">
+      <div id="hour">04</div>
+      <div id="min">15</div>
+      <div id="sec">40</div>
+      <div id="am">AM</div>
+    </div>
+  </body>
+  <script>
+    let clock = function () {
+      var time = new Date();
+      var hour = time.getHours();
+      var min = time.getMinutes();
+      var sec = time.getSeconds();
+
+      if (hour > 12) {
+        document.querySelector("#hour").innerText = hour - 12;
+      } else {
+        document.querySelector("#hour").innerText = hour;
+      }
+
+      document.querySelector("#min").innerText = min;
+      document.querySelector("#sec").innerText = sec;
+      if (hour >= 12) {
+        document.querySelector("#am").innerText = "PM";
+      } else {
+        document.querySelector("#am").innerText = "AM";
+      }
+
+      setInterval(clock, 1000);
+    };
+
+    clock();
+  </script>
+</html>

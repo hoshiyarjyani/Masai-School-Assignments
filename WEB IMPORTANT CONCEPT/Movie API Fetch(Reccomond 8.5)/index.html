@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie-3</title>
+    <style>
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: auto;
+        justify-content: space-evenly;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 21%;
+        padding: 1rem;
+      }
+      img {
+        width: 50%;
+      }
+      p {
+        font-size: 12px;
+      }
+      h1 {
+        text-align: center;
+        margin: auto;
+        color: coral;
+        margin-top: 2rem;
+      }
+      button {
+        background-color: blue;
+        color: white;
+        font-weight: 800;
+        border: 0px solid;
+        border-radius: 25px;
+        padding: 10px 25px;
+      }
+      input {
+        width: 65rem;
+        height: 2rem;
+        text-align: center;
+        border-radius: 1rem;
+        margin-top: 4rem;
+      }
+      @media only screen and (max-width: 600px) {
+        #container > div {
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          width: 48%;
+          padding: 1rem;
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        #container > div {
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          width: 30%;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SEARCH YOUR MOVIES HERE</h1>
+    <input type="text" placeholder="Search The Movies" id="search" />
+    <button>Search Movie</button>
+    <div id="container"></div>
+  </body>
+  <script src="/index.js"></script>
+</html>

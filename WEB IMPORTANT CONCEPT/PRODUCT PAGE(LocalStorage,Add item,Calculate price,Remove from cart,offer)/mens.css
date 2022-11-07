@@ -1,0 +1,102 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.parentDiv{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 6rem;
+}
+.childDiv{
+    width: 20.1%;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+img{
+    width: 100%;
+}
+p{
+font-size: 1rem;
+font-weight: 800;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    color: coral;
+    display: inline-block;
+     margin: 1rem 3rem;
+     
+}
+h1{
+ font-weight: 800;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: coral;
+text-decoration: underline;
+}
+a:hover{
+    color: rgb(247, 67, 18);
+}
+button{
+    padding: 0.8rem 5rem;
+    background-color:coral;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    border: 0px solid;
+    text-align: center;
+}
+button:hover{
+    background-color: rgb(243, 50, 50);
+}
+
+.cart{
+    display: flex;
+    justify-content: space-evenly;
+    width:25%;
+    margin-left: 50rem;
+    position: sticky;
+    top:0.7rem;
+    background-color: white;
+font-size: 1.6rem;
+    margin-left:58rem;
+    
+}
+.cartchild{
+    width: 40%;
+    color: coral;
+}
+.form{
+    width: 100%;
+    display: flex;
+}
+.form>div{
+    width: 85%;
+    margin-top: 1rem;
+}
+#apply{
+    color: coral;
+    text-align: right;
+}
+
+h3{
+    color: coral;
+    margin-left: 60rem;
+} 
+h2{
+    color: coral;
+}
+.main{
+    margin-left: 57rem;
+    width: 50%;
+}
+#promobtn{
+    padding: 0.3rem 1rem;
+    background-color:coral;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    border: 0px solid;
+    text-align: center;
+    margin-top: 1rem;
+}

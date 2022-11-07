@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" />
+    <button onclick="validate()">validate</button>
+  </body>
+
+  <script>
+    function validate() {
+      let otp = document.querySelector("input").value;
+      console.log(otp);
+
+      let otppromise = new Promise(function (resolve, reject) {
+        if (otp == "1234") {
+          resolve("otp is correct");
+        } else {
+          reject("otp is incorrect");
+        }
+      });
+      otppromise
+        .then(function (value) {
+          alert(value);
+        })
+        .catch(function (val) {
+          alert(val);
+        });
+    }
+  </script>
+</html>
