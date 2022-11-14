@@ -1,0 +1,227 @@
+/* Mobile no resistration */
+
+* {
+    margin: 0;
+  }
+  /* header seaction css */
+  
+  /* nav 1st part  */
+  
+  header {
+    margin: 0;
+    background-color: #e42529;
+    color: white;
+  }
+  #nav1 {
+    display: flex;
+    justify-content: end;
+    font-size: 17px;
+    margin-right: 15px;
+    font-weight: 700;
+  }
+  #nav1 > div {
+    padding: 5px;
+  }
+  #nav1 .fa-map-marker {
+    font-size: 22px;
+  }
+  
+  /* nav 2nd part */
+  
+  .sticky {
+    position: fixed;
+    background-color: #e42529;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  
+  #nav2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  #pincartlogin {
+    display: flex;
+    margin-right: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    width: 24%;
+  }
+  
+  #brandlogo {
+    margin-left: 2rem;
+  }
+  #brandlogo img {
+    width: 50%;
+    padding-bottom: 0.7rem;
+  }
+  #searchbar {
+    background-color: white;
+    height: 1.9rem;
+    border-radius: 25px;
+    margin-right: 7rem;
+    width: 43%;
+  }
+  #searchbar button {
+    background-color: white;
+    border: 0px solid white;
+    margin-right: 1rem;
+    color: gray;
+  }
+  #searchbar input {
+    width: 24rem;
+    padding: 8px 2px;
+    margin-left: 1rem;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+  }
+  
+  #pincartlogin div {
+    padding: 5px;
+  }
+  
+  /* BLUE NAV BAR */
+  
+  #navblue {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #003380;
+    padding: 10px 0;
+    margin-bottom: 0;
+  }
+  .container{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+  }
+  .banner{
+    width: 62%;
+  }
+  .banner img{
+    width: 100%;
+  }
+  .parent{
+    width: 28%;
+    padding: 0.7rem 1rem 1.5rem;
+    height: 10rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .parent hr{
+    color: rgb(226, 225, 225);
+  }
+  .parent 
+  input{
+    width: 100%;
+    margin-top: 1.4rem;
+   height: 1.7rem;
+  
+   outline: gray;
+  }
+  .parent h4{
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+#btn{
+    background-color: #e42529;
+    border: 0px solid #e42529;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    font-size: 
+    10px;
+}
+.p{
+    background-color: #F9FAFD;
+}
+#mobile{
+    padding-left: 14px;
+    width: 95%;
+    font-size: 15px;
+}
+
+
+/* footer section */
+.footer{
+    background-color: #003380;
+    color:white;
+    padding-bottom: 1.7rem;
+}
+.footerdetails{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.footerdetails > div{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.footerdetails a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    margin-top: 7px;
+}
+.footerdetails h3{
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: 2px;
+}
+
+.playstorelogo{
+    display: flex;
+    width: 57%;
+    margin-left: 1.2rem;
+    justify-content: space-evenly;
+}
+.playstorelogo h3{
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.follow{
+    width: 38%;
+   
+}
+.playstore{
+    width: 50%;
+    
+}
+.playstore img{
+    width: 28%;
+}
+#disclaimer{
+    background-color: #0A244A;
+    margin: auto;
+    text-align: center;
+    color:white;
+    padding:0.5rem 0;
+
+}
+#disclaimer .line{
+    font-weight: 700;
+        text-decoration: underline;
+    
+}
+#disclaimer h3{
+    font-size: 19px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    
+}
+
+#thin{
+   background-color: #092146;
+width: 100%;
+height: 1.5rem;
+padding-top: 10px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

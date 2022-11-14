@@ -215,8 +215,10 @@ function forcastDatashow(datas) {
   }
 }
 
+//on load
+
 function Defaultvalue() {
-  document.querySelector("#input").value = "new delhi";
+  document.querySelector("#input").value = "New Delhi";
 
   city = document.querySelector("#input").value;
 

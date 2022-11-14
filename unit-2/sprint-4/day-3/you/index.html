@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let count = -7;
+    let promise = new Promise(function (resolve, reject) {
+      if (count > 0) {
+        resolve("My Promise is resolved");
+      } else {
+        reject("My promise is rejected");
+      }
+    });
+
+    promise
+      .then(function (fromresolve) {
+        console.log(fromresolve);
+      })
+      .catch(function (fromreject) {
+        console.log(fromreject);
+      });
+
+    console.log(promise);
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    
+    let count = 6;
+    let promise = new Promise(function (resolve, reject) {
+      if (count % 2 == 0) {
+        resolve("The promise is resolve bcz No is even");
+      } else {
+        reject("The promise is reject bcz No is odd");
+      }
+    });
+    console.log(promise);
+
+    promise
+      .then(function (resolved) {
+        console.log(resolved);
+      })
+      .catch(function (rejected) {
+        console.log(rejected);
+      });
+
+  </script>
+</html>
