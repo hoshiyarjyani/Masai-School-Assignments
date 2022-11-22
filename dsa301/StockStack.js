@@ -6,6 +6,7 @@
 
 // For the first day, span is always 1. In the example we can see that for day 2 at 60, there is no day before it where the price was less than 60. Hence span is 1 again. For day 3, the price at day 2 (60) is less than 70, hence span is 2. Similarly, for day 4 and day 5. Remember days should be consecutive, that’s why the span for day 4 is 1 – even though there was a day 2 where the price was less than 65.
 
+
 // Input
 // Input Format
 
@@ -19,12 +20,14 @@
 
 // N <= 1000000
 
+
 // Output
 // Output Format
 
 // Print the stock span for each days
 
-// Sample Input 1
+
+// Sample Input 1 
 
 // 1
 // 6
@@ -43,8 +46,8 @@ function myfunction(arr, n) {
   let stk = [];
   let ans = [];
   for (let i = 0; i < n; i++) {
-    while (stk.length != 0 && arr[stk[stk.length - 1]] <= arr[i]) {
-      stk.pop();
+    while (stk.length != 0 && arr[stk[stk.length - 1]] <= arr[i]){
+        stk.pop(); 
     }
 
     if (stk.length == 0) ans.push(i + 1);
@@ -58,36 +61,38 @@ function myfunction(arr, n) {
   console.log(ans.join(" "));
 }
 
-function runProgram(input) {
+
+
+function runProgram(input){
   // Write Code Here
-  input = input.split("\n");
-  tc = +input[0];
+  input=input.split("\n");
+  tc=+input[0];
   line = 1;
-  for (let i = 0; i < tc; i++) {
-    n = +input[line];
-    line++;
-    arr = input[line].split(" ").map(Number);
-    myfunction(arr, n);
-    line++;
+  for(let i = 0;i<tc;i++){
+      n=+input[line];
+      line++;
+      arr=input[line].split(" ").map(Number);
+      myfunction(arr,n);
+      line++;
   }
 }
 if (process.env.USERNAME === "") {
-  runProgram(``);
-} else {
-  process.stdin.resume();
-  process.stdin.setEncoding("ascii");
-  let read = "";
-  process.stdin.on("data", function (input) {
-    read += input;
-  });
-  process.stdin.on("end", function () {
-    read = read.replace(/\n$/, "");
-    read = read.replace(/\n$/, "");
-    runProgram(read);
-  });
-  process.on("SIGINT", function () {
-    read = read.replace(/\n$/, "");
-    runProgram(read);
-    process.exit(0);
-  });
-}
+     runProgram(``);
+ } else {
+     process.stdin.resume();
+     process.stdin.setEncoding("ascii");
+     let read = "";
+     process.stdin.on("data", function (input) {
+         read += input;
+     });
+     process.stdin.on("end", function () {
+         read = read.replace(/\n$/, "");
+         read = read.replace(/\n$/, "");
+         runProgram(read);
+     });
+     process.on("SIGINT", function () {
+         read = read.replace(/\n$/, "");
+         runProgram(read);
+         process.exit(0);
+     });
+ }
