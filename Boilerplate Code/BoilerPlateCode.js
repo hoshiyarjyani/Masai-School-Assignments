@@ -153,7 +153,7 @@ function runProgram(input){
    // Write Code Here
    input=input.split("\n");
    tc=+input[0];
-     line = 1;
+     line =  1;
      for(let i = 0; i<tc; i++){
           size = input[line].split(" ").map(Number);
          N = +size[0];
@@ -227,7 +227,7 @@ if (process.env.USERNAME === "") {
          read = read.replace(/\n$/, "");
          runProgram(read);
      });
-     process.on("SIGINT", function () {
+       process.on("SIGINT", function () {
          read = read.replace(/\n$/, "");
          runProgram(read);
          process.exit(0);
