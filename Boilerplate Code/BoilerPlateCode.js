@@ -1,9 +1,11 @@
 type-1
 1 word- 
 
+
+
 function runProgram(input){
    // Write Code Here
-  n=+input;
+  n= +input;
    units(n);
 }
 if (process.env.USERNAME === "") {
@@ -231,14 +233,14 @@ if (process.env.USERNAME === "") {
          read = read.replace(/\n$/, "");
          runProgram(read);
          process.exit(0);
-     });
+        });
  }
 
 
 
 
 
-type 7 
+type- 7 
 rectangular matrix test cases
 
 Sample Input 1 
