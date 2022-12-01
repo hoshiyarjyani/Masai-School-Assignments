@@ -31,6 +31,7 @@
 
 // In the sample test case, the array has 8 elements. The closest value to the first element 39, which is lesser than it is 27. Similarly, for 27 is 11, for 11 is 4, for 4 is 1, for 24 is 4, for the first instance of 32, the closest value is 24, and for the second instance, the closest value is 1, and for 1, the value is -1, as it has no values lesser than it in the array.
 
+
 function myFunction(N, arr) {
   let stk1 = [];
   let stk2 = [];
@@ -46,7 +47,7 @@ function myFunction(N, arr) {
     if (stk1.length == 0) {
       x.push(-1);
     } else {
-      x.push(i - stk1[stk1.length - 1]);
+      x.push(stk1[stk1.length - 1]);
     }
     stk1.push(i);
   }
@@ -59,31 +60,32 @@ function myFunction(N, arr) {
     if (stk2.length == 0) {
       y.push(-1);
     } else {
-      y.push(stk2[stk2.length - 1] - i);
+      y.push(stk2[stk2.length - 1]);
     }
     stk2.push(i);
   }
   y.reverse();
-
-  ///////////////////////////
+  ////////////////////////////////////
   for (i = 0; i < N; i++) {
-    if (x[i] != -1 && y[i] != -1) {
-      if (x[i] > y[i]) {
-        ans[i] = arr[y[i] + i];
-      } else {
-        ans[i] = arr[i - x[i]];
-      }
-    } else if (x[i] != -1 || y[i] != -1) {
-      if (x[i] != -1) {
-        ans[i] = arr[i - x[i]];
-      } else if (y[i] != -1) {
-        ans[i] = arr[i + y[i]];
-      }
+    if (x[i] == -1 && y[i] == -1) {
+      ans.push(-1);
+    } else if (x[i] == -1 && y[i] != -1) {
+      ans.push(arr[y[i]]);
+    } else if (x[i] != -1 && y[i] == -1) {
+      ans.push(arr[x[i]]);
     } else {
-      ans[i] = -1;
+      let a = Math.abs(i - x[i]);
+      let b = Math.abs(i - y[i]);
+
+      if (a > b) {
+        ans.push(arr[y[i]]);
+      } else {
+        ans.push(arr[x[i]]);
+      }
     }
-    ///////////////////////////
   }
+  ///////////////////////////
+
   //   console.log(x);
   //   console.log(y);
   console.log(ans.join(" "));
