@@ -6,7 +6,8 @@ function myfunction(arr, n) {
   for (let i = 0; i < n; i++) {
     let count = 1;
     while (stk.length != 0 && arr[stk[stk.length - 1]] <= arr[i]) {
-      count = count + ans[stk.pop()];
+      count = count + ans[stk[stk.length - 1]];
+      stk.pop();
     }
     ans[i] = count;
     stk.push(i);
@@ -19,13 +20,13 @@ function myfunction(arr, n) {
 //   //100 60 70 65 80 85
 //   let stk = [];
 //   let ans = [];
-//   for (let i = 0; i < n; i++) {
+//   for (let i = 0; i < n; i++){
 //     while (stk.length != 0 && arr[stk[stk.length - 1]] <= arr[i]){
 //         stk.pop();
-//     }
+//        }
 //     if (stk.length == 0) {
 //         ans.push(i + 1);
-//  }
+//    }
 //     else {
 //       ans.push(i - stk[stk.length - 1]);
 //     }
