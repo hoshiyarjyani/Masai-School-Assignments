@@ -42,7 +42,6 @@
 // The fourth element is 3, the elements greater than 3 in the array are {4,5} which both occur to the left of it. But the closer one is 4, therefore, the output is 4.
 
 // The fifth element 2 has three elements greater than it, {5,4,3}. The value closest to the element 2 is 3, therefore, the output is 3.
-
 function myFunction(N, arr) {
   let stk1 = [];
   let stk2 = [];
@@ -58,7 +57,7 @@ function myFunction(N, arr) {
     if (stk1.length == 0) {
       x.push(-1);
     } else {
-      x.push(i - stk1[stk1.length - 1]);
+      x.push(stk1[stk1.length - 1]);
     }
     stk1.push(i);
   }
@@ -71,31 +70,31 @@ function myFunction(N, arr) {
     if (stk2.length == 0) {
       y.push(-1);
     } else {
-      y.push(stk2[stk2.length - 1] - i);
+      y.push(stk2[stk2.length - 1]);
     }
     stk2.push(i);
   }
   y.reverse();
 
-  ///////////////////////////
   for (i = 0; i < N; i++) {
-    if (x[i] != -1 && y[i] != -1) {
-      if (x[i] > y[i]) {
-        ans[i] = arr[y[i] + i];
-      } else {
-        ans[i] = arr[i - x[i]];
-      }
-    } else if (x[i] != -1 || y[i] != -1) {
-      if (x[i] != -1) {
-        ans[i] = arr[i - x[i]];
-      } else if (y[i] != -1) {
-        ans[i] = arr[i + y[i]];
-      }
+    if (x[i] == -1 && y[i] == -1) {
+      ans.push(-1);
+    } else if (x[i] == -1 && y[i] != -1) {
+      ans.push(arr[y[i]]);
+    } else if (x[i] != -1 && y[i] == -1) {
+      ans.push(arr[x[i]]);
     } else {
-      ans[i] = -1;
+      let a = Math.abs(i - x[i]);
+      let b = Math.abs(i - y[i]);
+
+      if (a > b) {
+        ans.push(arr[y[i]]);
+      } else {
+        ans.push(arr[x[i]]);
+      }
     }
-    ///////////////////////////
   }
+
   //   console.log(x);
   //   console.log(y);
   console.log(ans.join(" "));
