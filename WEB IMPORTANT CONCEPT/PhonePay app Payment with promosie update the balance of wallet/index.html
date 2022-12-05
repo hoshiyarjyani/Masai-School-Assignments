@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phone Pay Payment</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="heading">
+          <img
+            src="/download.png"
+            alt="phone-pe"
+            id="phone-pe-logo"
+            class="phone-pe-logo"
+          />
+        </div>
+        <div class="main">
+          <div>
+            Current Balance:
+            <strong id="balance-amt">0.00</strong>
+          </div>
+
+          <label>
+            Payment Amount:
+            <input type="number" name="pay-amt" id="pay-amt" />
+          </label>
+
+          <label>
+            <button class="pay-btn" id="pay-btn">Pay now!</button>
+          </label>
+
+          <div class="feedback-wrapper">
+            <strong id="feedback-text">Welcome...</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
