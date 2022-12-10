@@ -74,7 +74,7 @@ var fillGaps = function (head) {
 
   let first = head;
   let prev = null;
-
+// ...
   for (let i = x; i < x + z; i++) {
     if (i == first.data) {
       prev = first;
