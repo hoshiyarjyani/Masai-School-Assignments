@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/skeleton.css">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/todo.css">
+    <title>Student Database</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h1>Title here</h1>
+          <p>Description here if required.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns four sidebar-one" id="sidebar-one">
+          <h4>Add New Todo</h4>
+          <form class="create_todo" method="post">
+            <input type="text" id="title" class="u-full-width" placeholder="Todo name" required/>
+            <input type="text" id="completed" class="u-full-width" placeholder="Status" required/>
+            <input type="submit" id="add-employee" class="u-full-width button button-primary" value="Add Todo"/>
+          </form>
+          <hr>
+          <h4>Item Limit PerPage</h4>
+          <select class="u-full-width select-tag button-primary">
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+          <hr>
+        </div>
+          <div class="columns eight main">
+            <div class="data-list-wrapper" id="data-list-wrapper"></div>
+            <div class="pagination-wrapper" id="pagination-wrapper">Pagination</div>
+          </div>
+      </div>
+    </div>
+    <script src="/todo.js"></script>
+  </body>
+</html>

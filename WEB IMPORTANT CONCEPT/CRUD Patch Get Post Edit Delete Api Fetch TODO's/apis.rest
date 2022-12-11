@@ -1,0 +1,123 @@
+### JSON Server GET - Read All Ingredients
+
+GET http://127.0.0.1:9090/recipeIngredients?_limit=5&_page=1
+
+### JSON Server GET - Read All Employees
+
+GET http://localhost:9090/employees
+
+### JSON Server POST - Create an Employee
+
+POST http://localhost:9090/employees
+Content-Type: application/json
+
+{
+  "name": "ABC XYZ",
+  "image": "/images/avatar/avatar1.jpeg",
+  "department": 1,
+  "salary": 95000
+}
+
+### GET Employee based on ID from json-server
+GET http://localhost:9090/employees
+
+### 
+
+DELETE http://localhost:9090/employees/bt1DVx4Akm
+
+### JSON Server PATCH - Update Employee Data
+PATCH http://localhost:9090/employees/R4dvtugCT2
+Content-Type: application/json
+
+{
+  "salary": 80000
+}
+
+
+### JSON Server PUT - Update Employee Data
+# Observe what happens to the rest of the fields
+PUT http://localhost:9090/employees/R4dvtugCT2
+Content-Type: application/json
+
+{
+  "salary": 90000
+}
+
+
+### GET - all users
+GET http://localhost:9090/users
+
+### GET - user with id 1
+GET http://localhost:9090/users/1
+
+### POST Register a new user
+POST http://localhost:9090/user/register
+Content-Type: application/json
+
+{
+  "username": "heman",
+  "firstname": "he",
+  "lastname": "man",
+  "email": "heman@mail.com",
+  "password": "heman",
+  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/762.jpg",
+  "userLevel": 4
+}
+
+### POST Login a user
+POST http://localhost:9090/user/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImZpcnN0bmFtZSI6IkFkIiwibGFzdG5hbWUiOiJNaW5pc3RlciIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsTG01THA0MHVCUjlDVXJabjU4Q2RPbDh5dTVHcDJ1bUFPLjZseS52V2NaMGEwdlVLc0hpQyIsImF2YXRhciI6Imh0dHBzOi8vY2xvdWRmbGFyZS1pcGZzLmNvbS9pcGZzL1FtZDNXNUR1aGdIaXJMSEdWaXhpNlY3NkxoQ2taVXo2cG5GdDVBSkJpeXZIeWUvYXZhdGFyLzc2Mi5qcGciLCJ1c2VyTGV2ZWwiOjQsImNyZWF0ZWRBdCI6MTY3MDE2NTk4MDYzOCwiaWF0IjoxNjcwNDg3NDMwLCJleHAiOjE2NzA1MDkwMzB9.VtoT7t0WMMtfBAgiB8WowRi43yQOSQ0hsOhuB2OJ5WQ
+
+### GET all todos
+GET  http://localhost:9090/todos/
+
+### GET all todos (using access token)
+GET http://localhost:9090/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImZpcnN0bmFtZSI6IkFkIiwibGFzdG5hbWUiOiJNaW5pc3RlciIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsTG01THA0MHVCUjlDVXJabjU4Q2RPbDh5dTVHcDJ1bUFPLjZseS52V2NaMGEwdlVLc0hpQyIsImF2YXRhciI6Imh0dHBzOi8vY2xvdWRmbGFyZS1pcGZzLmNvbS9pcGZzL1FtZDNXNUR1aGdIaXJMSEdWaXhpNlY3NkxoQ2taVXo2cG5GdDVBSkJpeXZIeWUvYXZhdGFyLzc2Mi5qcGciLCJ1c2VyTGV2ZWwiOjQsImNyZWF0ZWRBdCI6MTY3MDE2NTk4MDYzOCwiaWF0IjoxNjcwNDg3NDMwLCJleHAiOjE2NzA1MDkwMzB9.VtoT7t0WMMtfBAgiB8WowRi43yQOSQ0hsOhuB2OJ5WQ
+
+### DELETE a todo
+DELETE http://localhost:9090/todos/496
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImZpcnN0bmFtZSI6IkFkIiwibGFzdG5hbWUiOiJNaW5pc3RlciIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsTG01THA0MHVCUjlDVXJabjU4Q2RPbDh5dTVHcDJ1bUFPLjZseS52V2NaMGEwdlVLc0hpQyIsImF2YXRhciI6Imh0dHBzOi8vY2xvdWRmbGFyZS1pcGZzLmNvbS9pcGZzL1FtZDNXNUR1aGdIaXJMSEdWaXhpNlY3NkxoQ2taVXo2cG5GdDVBSkJpeXZIeWUvYXZhdGFyLzc2Mi5qcGciLCJ1c2VyTGV2ZWwiOjQsImNyZWF0ZWRBdCI6MTY3MDE2NTk4MDYzOCwiaWF0IjoxNjcwNDg3NDMwLCJleHAiOjE2NzA1MDkwMzB9.VtoT7t0WMMtfBAgiB8WowRi43yQOSQ0hsOhuB2OJ5WQ
+
+### CREATE a todo
+POST http://localhost:9090/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImZpcnN0bmFtZSI6IkFkIiwibGFzdG5hbWUiOiJNaW5pc3RlciIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsTG01THA0MHVCUjlDVXJabjU4Q2RPbDh5dTVHcDJ1bUFPLjZseS52V2NaMGEwdlVLc0hpQyIsImF2YXRhciI6Imh0dHBzOi8vY2xvdWRmbGFyZS1pcGZzLmNvbS9pcGZzL1FtZDNXNUR1aGdIaXJMSEdWaXhpNlY3NkxoQ2taVXo2cG5GdDVBSkJpeXZIeWUvYXZhdGFyLzc2Mi5qcGciLCJ1c2VyTGV2ZWwiOjQsImNyZWF0ZWRBdCI6MTY3MDE2NTk4MDYzOCwiaWF0IjoxNjcwNDg3NDMwLCJleHAiOjE2NzA1MDkwMzB9.VtoT7t0WMMtfBAgiB8WowRi43yQOSQ0hsOhuB2OJ5WQ
+
+{
+  "userId": 48,
+  "title": "New loyal Minskin",
+  "completed": false
+}
+
+
+### PATCH a todo
+PATCH http://localhost:9090/todos/TEQ05k6xAX
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImZpcnN0bmFtZSI6IkFkIiwibGFzdG5hbWUiOiJNaW5pc3RlciIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsTG01THA0MHVCUjlDVXJabjU4Q2RPbDh5dTVHcDJ1bUFPLjZseS52V2NaMGEwdlVLc0hpQyIsImF2YXRhciI6Imh0dHBzOi8vY2xvdWRmbGFyZS1pcGZzLmNvbS9pcGZzL1FtZDNXNUR1aGdIaXJMSEdWaXhpNlY3NkxoQ2taVXo2cG5GdDVBSkJpeXZIeWUvYXZhdGFyLzc2Mi5qcGciLCJ1c2VyTGV2ZWwiOjQsImNyZWF0ZWRBdCI6MTY3MDE2NTk4MDYzOCwiaWF0IjoxNjcwNDg3NDMwLCJleHAiOjE2NzA1MDkwMzB9.VtoT7t0WMMtfBAgiB8WowRi43yQOSQ0hsOhuB2OJ5WQ
+
+{
+  "completed": false
+}
+
+### PUT a todo
+PUT http://localhost:9090/todos/TEQ05k6xAX
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImZpcnN0bmFtZSI6IkFkIiwibGFzdG5hbWUiOiJNaW5pc3RlciIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRsTG01THA0MHVCUjlDVXJabjU4Q2RPbDh5dTVHcDJ1bUFPLjZseS52V2NaMGEwdlVLc0hpQyIsImF2YXRhciI6Imh0dHBzOi8vY2xvdWRmbGFyZS1pcGZzLmNvbS9pcGZzL1FtZDNXNUR1aGdIaXJMSEdWaXhpNlY3NkxoQ2taVXo2cG5GdDVBSkJpeXZIeWUvYXZhdGFyLzc2Mi5qcGciLCJ1c2VyTGV2ZWwiOjQsImNyZWF0ZWRBdCI6MTY3MDE2NTk4MDYzOCwiaWF0IjoxNjcwNDg3NDMwLCJleHAiOjE2NzA1MDkwMzB9.VtoT7t0WMMtfBAgiB8WowRi43yQOSQ0hsOhuB2OJ5WQ
+
+{
+  "userId": 48,
+  "title": "New loyal Minskin",
+  "completed": false,
+  "createdAt": 1670489267759,
+  "id": "TEQ05k6xAX"
+}

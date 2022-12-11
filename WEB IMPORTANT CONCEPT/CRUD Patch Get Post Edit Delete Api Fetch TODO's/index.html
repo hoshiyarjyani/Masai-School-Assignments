@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Login and Registration </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="styles/demo.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="styles/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+                <section>              
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form autocomplete="on">
+                                <h1>Log in</h1>
+                                <p>
+                                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p>
+                                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                </p>
+                                <p class="login button">
+                                    <input type="submit" value="Login" />
+                                </p>
+                                <p class="change_link">
+                                    Not a member yet ?
+                                    <a href="#toregister" class="to_register">Join us</a>
+                                </p>
+                            </form>
+                        </div>
+                        <div id="register" class="animate form">
+                            <form autocomplete="on">
+                                <h1> Sign up </h1>
+                                <p>
+                                    <label for="usernamesignup" class="uname" data-icon="u">Username</label>
+                                    <input id="username" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                </p>
+                                <p>
+                                    <label for="emailsignup" class="youmail" data-icon="e" >FirstName</label>
+                                    <input id="firstname" name="emailsignup" required="required" type="text" placeholder="jane"/>
+                                </p>
+                                <p>
+                                    <label for="emailsignup" class="youmail" data-icon="e" >LastName</label>
+                                    <input id="lastname" name="emailsignup" required="required" type="text" placeholder="singh"/>
+                                </p>
+                                <p>
+                                    <label for="emailsignup" class="youmail" data-icon="e" >Your email</label>
+                                    <input id="email" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                                </p>
+                                <p>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                    <input id="password" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p>
+                                    <label for="passwordsignup_confirm" class="youpasswd">Avtar URL </label>
+                                    <input id="avatar" name="passwordsignup_confirm" required="required" type="url" placeholder="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/762.jpg"/>
+                                </p>
+                                <p class="signin button">
+                                    <input type="submit" value="Sign up"/>
+                                </p>
+                                <p class="change_link">  
+                                    Already a member ?
+                                    <a href="#tologin" class="to_register"> Go and log in </a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>
+<script src="/Auth.js" type="module"></script>
