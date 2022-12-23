@@ -21,6 +21,8 @@ package conceptofjava;
         void name(){
            System.out.println(this.name);
         }
+
+        
         void age(){
            System.out.println(this.name+" "+this.age);
         }
