@@ -22,7 +22,7 @@ package conceptofjava;
            System.out.println(this.name);
         }
 
-        
+
         void age(){
            System.out.println(this.name+" "+this.age);
         }
@@ -37,6 +37,7 @@ package conceptofjava;
             ConstrctorForClassOfInstructor m = new ConstrctorForClassOfInstructor("Hoshiyar",24,"JA111","JAVA");
         }
       }
+      
       
 
 
