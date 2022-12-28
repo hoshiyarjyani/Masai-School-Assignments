@@ -1,3 +1,9 @@
+//n=3;
+// ((()))
+// (()())
+// (())()
+// ()(())
+// ()()()
 public class GenrateAllValideParanthisis {
     static void myFun(String s, int open, int close, int n) {
         if (s.length() == 2 * n) {
