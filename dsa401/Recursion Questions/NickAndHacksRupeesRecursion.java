@@ -1,22 +1,30 @@
+import java.util.Scanner;
 
 public class NickAndHacksRupeesRecursion {
-    static boolean myFun(int n, int r) {
-        if (n == r) {
+
+    static boolean myFun(double t, double k) {
+        if (t == k) {
             return true;
-        }else if(r>n){
+        } else if (t < k) {
             return false;
-        }
-         else {
-            return myFun(n, r * 10) || myFun(n, r * 20);
+        } else {
+            return myFun(t, k * 10) || myFun(t, k * 20);
         }
     }
 
-    public static void main(String[] args) {
-        boolean x = myFun(25, 1);
-        if (x == true) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        for (int i = 0; i < x; i++) {
+            double t = sc.nextDouble();
+            int k = 1;
+            boolean z = myFun(t, k);
+            if (z == true) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
         }
     }
+
 }
