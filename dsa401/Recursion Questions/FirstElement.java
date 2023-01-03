@@ -1,70 +1,96 @@
-// What is a good string?
+// Element in the middle Ended
 // Description
 
-// Deletion of characters to make them nice
+// Given an unsorted array of size, N. Find the first element in the array such that all of its left elements are smaller and all right elements to it are greater than it.
 
-// Let's call a string good if its length is even, and every character in odd position of this string is different from the next character (the first character is different from the second, the third is different from the fourth, and so on).
+// Note: Left and right side elements can be equal to the required element. And extreme elements cannot be required element.
 
-// For example, the strings "good", "string" and "xyyx" are good strings, and the strings "bad", "aa" and "aabc" are not good. Note that the empty string is considered good.
-
-// You are given a string s, you have to delete minimum number of characters from this string so that it becomes good.
 
 // Input
-// Input Format :
+// Input Format
 
-// The first line contains one integer n, the number of characters in string s.
+// The first line contains an integer n denoting the size of the array and the second line contains n space separated array elements.
 
-// The second line contains the string s, consisting of exactly n lowercase Latin letters.
+// Constraints
 
-// Constraints :
+// n <= 1000
 
-// 1<= n <= 2*10^5
+// Ai <= 10000
+
+
+
 
 // Output
-// In the first line, print one integer k (0≤k≤n) - the minimum number of characters you have to delete from s to make it good.
+// For each test case, in a new line print the required element. If no such element present in the array then print -1.
 
-// In the second line, print the resulting string s. If it is empty, you may leave the second line blank, or not print it at all.
 
 // Sample Input 1 
 
-// 4
-// good
+// 5
+// 4 3 6 7 8
 // Sample Output 1
 
-// 0
-// good
+// 6
+
 
 import java.util.Scanner;
 
 public class FirstElement {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        String str = sc.next();
-        int count = 0;
-        for (int i = 0; i < n - 1; i += 2) {
-            if (str.charAt(i) == str.charAt(i + 1)) {
-                count++;
-            }
-        }
-        System.out.println(count);
-        if (count == 0) {
-            System.out.println(str);
+
+    static int myFun(int[] arr, int n) {
+        int x = -1;
+        if (n == 0) {
+            return x;
+        } else if (n == 1) {
+            int p = arr[0];
+            return p;
         } else {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < n - 1; i += 2) {
-                if (str.charAt(i) != str.charAt(i + 1)) {
-                    sb.append(str.charAt(i)).append(str.charAt(i + 1));
+            // 5
+            // 4 3 6 7 8
+           
+            for (int i = 0; i < n; i++) {
+                for (int j = i+1; j < n; j++) {
+                    if (arr[i] <= arr[j]) {
+                        x = i;
+                    } else {
+                        x = -1;
+                        break;
+                    }
+                }
+                boolean check = true;
+                if (x != -1) {
+                    for (int k = i - 1; k >= 0; k--) {
+                        if (arr[i] >= arr[k]) {
+                            check = true;
+                        } else {
+                            check = false;
+                            break;
+                        }
+                    }
+                    if (check == true && i != -1) {
+                        int m = arr[i];
+                        return m;
+                    }
+                    check = true;
                 }
             }
-            if (n % 2 == 1) {
-                sb.append(str.charAt(n - 1));
-            }
-            System.out.println(sb);
+            return -1;
         }
+        
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int tc = sc.nextInt();
+        int[] arr = new int[tc];
+
+        for (int i = 0; i < tc; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int ans = myFun(arr, tc);
+        System.out.println(ans);
     }
 }
-
 
 
 // Second Solution
