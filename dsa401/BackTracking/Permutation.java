@@ -1,13 +1,13 @@
 package BackTracking;
 
 public class Permutation {
-    static void perFun(String str, int l, int r) {
-        if (l == r) {
+    static void perFun(String str, int s, int e) {
+        if (s == e) {
             System.out.println(str);
         } else {
-            for (int i = l; i <= r; i++) {
-                str = swap(str, l, i);
-                perFun(str, l + 1, r);
+            for (int i = s; i <= e; i++) {
+                str = swap(str, s, i);
+                perFun(str, s + 1, e);
             }
         }
     }
