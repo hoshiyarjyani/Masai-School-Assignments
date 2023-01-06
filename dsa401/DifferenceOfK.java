@@ -58,7 +58,7 @@ public class Main {
             boolean found = false;
             for (int i = 0; i < N; i++) {
                 for (int j = i + 1; j < N; j++) {
-                    if (A[i] - A[j] == K) {
+                    if (A[j] - A[i] == K) {
                         found = true;
                         break;
                     }
