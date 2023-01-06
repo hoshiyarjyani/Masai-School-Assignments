@@ -80,12 +80,14 @@ class chartlist {
         for (int i = 0; i < 5; i++) {
             topFive[i] = arr[i];
         }
+        Arrays.sort(topFive, (a, b) -> a.popularity - b.popularity);
 
-        Arrays.sort(topFive, new Comparator<song>() {
-            public int compare(song a, song b) {
-                return a.popularity - b.popularity;
-            }
-        });
+//alternate
+        // Arrays.sort(topFive, new Comparator<song>() {
+        //     public int compare(song a, song b) {
+        //         return a.popularity - b.popularity;
+        //     }
+        // });
 
         String[] topFiveNames = new String[5];
         for (int i = 0; i < 5; i++) {
