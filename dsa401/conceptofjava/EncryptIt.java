@@ -58,14 +58,14 @@ public class EncryptIt {
             if (Character.isLetterOrDigit(c)) {
 
                 if (Character.isLowerCase(c)) {
-
-                    sb.append((char) ((c - 'a' + k) % 26 + 'a'));
+                    sb.append((char) ('a' + (c - 'a' + k) % 26));
+                    // sb.append((char) ((c - 'a' + k) % 26 + 'a'));
                 } else if (Character.isUpperCase(c)) {
-
-                    sb.append((char) ((c - 'A' + k) % 26 + 'A'));
+                    sb.append((char) ('A' + (c - 'A' + k) % 26));
+                    // sb.append((char) ((c - 'A' + k) % 26 + 'A'));
                 } else {
-
-                    sb.append((char) ((c - '0' + k) % 10 + '0'));
+                    sb.append((char) ('0' + (c - '0' + k) % 10));
+                    // sb.append((char) ((c - '0' + k) % 10 + '0'));
                 }
             } else {
 
