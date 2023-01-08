@@ -74,19 +74,18 @@ class chartlist {
     }
 
     String[] top_five() {
-
+        Arrays.sort(arr, (a, b) -> a.popularity - b.popularity);
         song[] topFive = new song[5];
 
         for (int i = 0; i < 5; i++) {
             topFive[i] = arr[i];
         }
-        Arrays.sort(topFive, (a, b) -> a.popularity - b.popularity);
 
-//alternate
+        // alternate
         // Arrays.sort(topFive, new Comparator<song>() {
-        //     public int compare(song a, song b) {
-        //         return a.popularity - b.popularity;
-        //     }
+        // public int compare(song a, song b) {
+        // return a.popularity - b.popularity;
+        // }
         // });
 
         String[] topFiveNames = new String[5];
@@ -98,23 +97,15 @@ class chartlist {
 
     String leastPopular() {
 
-        song leastPopular = arr[0];
-        for (int i = 1; i < n; i++) {
-            if (arr[i].popularity < leastPopular.popularity) {
-                leastPopular = arr[i];
-            }
-        }
+        song leastPopular = arr[arr.length - 1];
+
         return leastPopular.name;
 
     }
 
     public String mostPopular() {
         song mostPopular = arr[0];
-        for (int i = 1; i < n; i++) {
-            if (arr[i].popularity > mostPopular.popularity) {
-                mostPopular = arr[i];
-            }
-        }
+
         return mostPopular.name;
     }
 
