@@ -9,7 +9,6 @@
 
 // Bob is ecologically minded, so he doesn‟t want to cut off more wood than necessary. That‟s why he wants to set his sawblade as high as possible. Help Bob find the maximum integer height of the sawblade that still allows him to cut off at least M metres of wood.
 
-
 // Input
 // Input Format
 
@@ -23,16 +22,10 @@
 
 // 1 ≤ M ≤ 2 000 000 000
 
-
-
-
-
-
 // Output
 // Output Format
 
 // The first and only line of output must contain the required height setting.
-
 
 // Sample Input 1 
 
@@ -42,7 +35,6 @@
 
 // 15
 // Language: 
- 
 
 package BinarySearch;
 
@@ -50,11 +42,11 @@ import java.util.Scanner;
 
 public class WoodCutter {
 
-    static int woodCutter(int[] treeHeights, int n, int m) {
-        int low = 0, high = 1000000000;
-        int ans = 0;
+    static long woodCutter(long[] treeHeights, long n, long m) {
+        long low = 0, high = 1000000000;
+        long ans = 0;
         while (low <= high) {
-            int mid = (low + high) / 2;
+            long mid = (low + high) / 2;
             long total = 0;
             for (int i = 0; i < n; i++) {
                 if (treeHeights[i] > mid) {
@@ -73,15 +65,15 @@ public class WoodCutter {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] treeHeights = new int[n];
+        long n = sc.nextLong();
+        long m = sc.nextLong();
+        long[] treeHeights = new long[(int) n];
 
-        for (int i = 0; i < n; i++) {
-            treeHeights[i] = sc.nextInt();
+        for (long i = 0; i < n; i++) {
+            treeHeights[(int) i] = sc.nextLong();
         }
 
-        int result = woodCutter(treeHeights, n, m);
+        long result = woodCutter(treeHeights, n, m);
         System.out.println(result);
     }
 }
