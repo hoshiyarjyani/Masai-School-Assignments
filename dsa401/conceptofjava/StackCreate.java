@@ -1,5 +1,6 @@
 package conceptofjava;
 
+//First Approch
 public class StackCreate {
 
     // complete the class as mentioned in the problem statement
@@ -41,6 +42,51 @@ public class StackCreate {
     int size() {
         return size;
     }
+}
+
+// Second Approch
+class stack {
+    int top;
+    int size;
+    int[] arr;
+
+    stack(int size) {
+        arr = new int[size];
+        this.top = -1;
+        this.size = size;
+    }
+
+    boolean push(int data) {
+        if (top == size - 1) {
+            return false;
+        } else {
+            arr[++top] = data;
+            return true;
+        }
+    }
+
+    boolean pop() {
+        if (top == -1) {
+            return false;
+        } else {
+            System.out.println(arr[top--]);
+            return true;
+        }
+    }
+
+    boolean peek() {
+        if (top == -1) {
+            return false;
+        } else {
+            System.out.println(arr[top]);
+            return true;
+        }
+    }
+
+    int size() {
+        return top + 1;
+    }
+
 }
 
 // Create your own stack -0:8:29
