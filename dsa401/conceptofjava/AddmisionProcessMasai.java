@@ -170,7 +170,7 @@ class xProgram extends admissionProcess {
     }
 
     xProgram(int age, boolean plusTwo, String citizen, int yearsOfExperience) {
-        super(age, plusTwo, citizen);
+        super(age, plusTwo, citizen,750);
         this.yearsOfExperience = yearsOfExperience;
     }
 
