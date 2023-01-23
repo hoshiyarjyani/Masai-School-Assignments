@@ -56,5 +56,5 @@ public class EvenSumInCoulmns {
             sum = 0;
         }
     }
-
+    
 }
