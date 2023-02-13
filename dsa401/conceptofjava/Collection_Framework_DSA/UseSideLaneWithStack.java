@@ -34,48 +34,53 @@
 // Sample Output 1
 
 // YES
+
+
 import java.util.Scanner;
 import java.util.Stack;
-
-public class UseSideLaneWithStack {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        for (int i = 0; i < t; i++) {
-            int n = sc.nextInt();
-            int[] cars = new int[n];
-            for (int j = 0; j < n; j++) {
-                cars[j] = sc.nextInt();
-            }
-            myFunction(n, cars);
+class UseSideLaneWithStack{
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int t = sc.nextInt();
+    for(int i = 0;i<t;i++){
+        int n = sc.nextInt();
+        int [] truck = new int[n];
+        for(int j = 0;j<n;j++){
+            truck[j] = sc.nextInt();
         }
+        myFunction(n,truck);
     }
-
-    public static void myFunction(int n, int[] arr) {
-        // 5 1 2 4 3
-        Stack<Integer> stk = new Stack<>();
-        int count = 1;
-        for (int i = 0; i < n; i++) {
-            if (arr[i] == count) {
-                count++;
-            } else if (!stk.empty() && stk.peek() == count) {
-                stk.pop();
-                count++;
-                i--;
-            } else {
-                stk.push(arr[i]);
-            }
-        }
-        for (int i = stk.size() - 1; i >= 0; i--) {
-            if (stk.peek() == count) {
-                stk.pop();
-                count++;
-            }
-        }
-        if (stk.isEmpty()) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
+}
+// 5 1 2 4 3
+public static void myFunction(int n,int [] arr){
+    // this stack forr the use of side lane of trucks
+    Stack<Integer> stk = new Stack<>();
+int count = 1;
+for(int i = 0;i<n;i++){ //5
+    if(arr[i] == count){
+        count++;
+    }else if(!stk.empty() && stk.peek()==count){
+        stk.pop();
+        count++;
+        i--;
+    }else{
+        stk.push(arr[i]);
     }
+}
+
+for(int i = stk.size()-1;i>=0;i--){
+    if(stk.peek()==count){
+        stk.pop();
+        count++;
+    }
+}
+if(stk.isEmpty()){
+    System.out.println("YES");
+}else{
+    System.out.println("NO");
+}
+
+
+}
+
 }
