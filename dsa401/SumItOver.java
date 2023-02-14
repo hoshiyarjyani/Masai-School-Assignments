@@ -41,19 +41,19 @@
 
 import java.util.*;
 
-class Main {
+class SumItOver {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int tc = sc.nextInt();
         while (tc-- > 0) {
             int sum = sc.nextInt();
             StringBuilder sb = new StringBuilder();
-            for (int i = 9; i >= 1; i--) {// =9 8 7
-                if (sum >= i) { // 20 = 11 3
+            for (int i = 9; i >= 1; i--) {
+                if (sum >= i) {
                     sb.append(i);
                     sum -= i;
-                }  
-            } 
+                }
+            }
             System.out.println(sb.reverse());
         }
     }

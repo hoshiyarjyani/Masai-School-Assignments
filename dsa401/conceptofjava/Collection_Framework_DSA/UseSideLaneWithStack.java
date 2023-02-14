@@ -53,7 +53,7 @@ public static void main(String[] args) {
 }
 // 5 1 2 4 3
 public static void myFunction(int n,int [] arr){
-    // this stack forr the use of side lane of trucks
+    // this stack for the use of side lane of trucks
     Stack<Integer> stk = new Stack<>();
 int count = 1;
 for(int i = 0;i<n;i++){ //5
