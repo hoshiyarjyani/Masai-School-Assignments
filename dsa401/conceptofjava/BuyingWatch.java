@@ -76,3 +76,26 @@ class WatchPriceCalculator {
         }
     }
 }
+// ============================When return wants in String Format=============================
+
+class WatchPriceCalculator {
+    String getWatchPrice(String watchType, int age, String gender) {
+        int discount = 0;
+        if (age >= 60) {
+            discount += 3;
+        }
+        if (gender == "female") {
+            discount += 2;
+        }
+
+        if (watchType == "Rolex") {
+            double amt = 10999 * 1.26;
+            double fp = ((double) (100 - discount) / 100) * amt;
+            return "The total bill amount is " + String.format("%.2f", fp);
+        } else {
+            double amt = 7999 * 1.2;
+            double fp = ((double) (100 - discount) / 100) * amt;
+            return "The total bill amount is " + String.format("%.2f", fp);
+        }
+    }
+}
