@@ -1,4 +1,4 @@
-// 2D Array and Product Ended
+// 2D Array and Product
 // Description
 
 // You are given an array of n rows, m columns which contains positive integers and  product P

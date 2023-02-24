@@ -37,7 +37,7 @@
 // 7 4 1 2 3 6 9 8
 
 function cirTraversal(matrix, N) {
-  //write code here
+  //bottom left to top left
   let temp = "";
   for (let i = N - 1; i >= 0; i--) {
     for (let j = 0; j < N; j++) {
@@ -46,12 +46,14 @@ function cirTraversal(matrix, N) {
       }
     }
   }
+
+  //top left - top right
   for (let i = 0; i < 1; i++) {
     for (let j = 1; j < N; j++) {
       temp += matrix[i][j] + " ";
     }
   }
-
+//top right - bottom right
   for (let i = 1; i < N; i++) {
     for (let j = 0; j < N; j++) {
       if (j == N - 1) {
@@ -59,6 +61,8 @@ function cirTraversal(matrix, N) {
       }
     }
   }
+//bottom right - bottom left
+
   for (let i = N - 1; i > 0; i--) {
     for (let j = N - 2; j > 0; j--) {
       if (i == N - 1) {
