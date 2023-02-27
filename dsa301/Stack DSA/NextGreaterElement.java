@@ -31,6 +31,9 @@
 
 // In the sample test case, the array contains 4 elements, and for the first element, the next greater element will be 3, similarly for the next element, the next greater element will be 4, and for the third element as well, the next greater element will be 4. Since, the last element has no elements ahead of it, the next greater element will be -1.
 
+//1
+//4
+//1 3 2 4
 import java.util.*;
 
 class Main {
@@ -44,7 +47,7 @@ class Main {
                 arr[i] = sc.nextInt();
             }
             Stack<Integer> stk = new Stack<>();
-            int[] res = new int[n];
+            int res[] = new int[n];
             for (int i = n - 1; i >= 0; i--) {
                 while (!stk.empty() && stk.peek() <= arr[i]) {
                     stk.pop();
@@ -54,12 +57,13 @@ class Main {
                 } else {
                     res[i] = stk.peek();
                 }
-                stk.push(arr[i]);
-            }
-            for (int j : res) {
-                System.out.print(j + " ");
-            }
 
+                stk.push(arr[i]);
+
+            }
+            for (int elem : res) {
+                System.out.print(elem + " ");
+            }
             System.out.println();
         }
     }
