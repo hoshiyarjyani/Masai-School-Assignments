@@ -31,9 +31,7 @@ class Main {
                     totel += adding * addCost;
                 }
             }
-
-            System.out.println(totel);
-
+              System.out.println(totel);
         }
     }
 }
