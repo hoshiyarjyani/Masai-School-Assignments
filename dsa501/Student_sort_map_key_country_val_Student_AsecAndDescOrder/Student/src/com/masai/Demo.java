@@ -22,8 +22,12 @@ public class Demo {
 	 System.out.println(map);  
 	   
 	 List<Map.Entry<String,Student>> list = new ArrayList<>(map.entrySet());
+
+	 System.out.println("===================Asecnding Order====================");
 	 Collections.sort(list,(a,b)->a.getValue().getName().compareTo(b.getValue().getName()));
 	   System.out.println(list);  
+
+	   System.out.println("===================Desecnding Order====================");
 	   Collections.sort(list,(a,b)->b.getValue().getName().compareTo(a.getValue().getName()));
 	   System.out.println(list); 
 	   
