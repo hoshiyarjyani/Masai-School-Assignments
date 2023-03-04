@@ -51,12 +51,12 @@
 
 import java.util.*;
 
-//aaabccddd - abd
 class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         Stack<Character> stk = new Stack<>();
+        // aaabccddd
         for (int i = 0; i < str.length(); i++) {
             if (!stk.empty() && stk.peek() == str.charAt(i)) {
                 stk.pop();
@@ -65,17 +65,15 @@ class Main {
             }
         }
         StringBuilder sb = new StringBuilder();
-        for (char elem : stk) {
-            sb.append(elem);
+        for (char c : stk) {
+            sb.append(c);
         }
-        // aabbcc
-        String result = sb.toString();
 
+        String result = sb.toString();
         if (stk.empty()) {
             System.out.println("Empty String");
         } else {
             System.out.println(result);
         }
-
     }
 }

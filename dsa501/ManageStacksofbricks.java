@@ -11,12 +11,14 @@ class Main {
             int[] stk1 = new int[n];
             int[] stk2 = new int[n];
             sc.nextLine();
+            
             for (int i = 0; i < n; i++) {
                 String elem = sc.nextLine();
                 String[] strArr = elem.split(" ");
                 stk1[i] = Integer.parseInt(strArr[0]);
                 stk2[i] = Integer.parseInt(strArr[1]);
             }
+
             Arrays.sort(stk1);
             Arrays.sort(stk2);
 

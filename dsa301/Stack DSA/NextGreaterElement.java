@@ -47,7 +47,7 @@ class Main {
                 arr[i] = sc.nextInt();
             }
             Stack<Integer> stk = new Stack<>();
-            int res[] = new int[n];
+            int [] res = new int[n];
             for (int i = n - 1; i >= 0; i--) {
                 while (!stk.empty() && stk.peek() <= arr[i]) {
                     stk.pop();
