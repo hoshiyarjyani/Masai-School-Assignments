@@ -34,8 +34,7 @@ class Akshay implements Runnable {
 	   t2.start();
 	   t3.start();	 
 	   
-	   t1.join();
-	   t2.join();
+	    
 	   t3.join();
 	}
 	
