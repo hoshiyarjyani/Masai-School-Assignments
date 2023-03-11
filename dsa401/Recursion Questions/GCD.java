@@ -15,7 +15,7 @@ class GCD {
             int a = sc.nextInt();
             int b = sc.nextInt();
             int z = myFun(a, b);
-            System.out.println(z);
+            System.out.println(y);
         }
     }
 }
