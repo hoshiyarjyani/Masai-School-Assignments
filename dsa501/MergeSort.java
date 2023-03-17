@@ -23,8 +23,8 @@ public class MergeSort {
             mergedArr[k++] = arr[j++];
         }
 
-        for (int a = s, b = 0; a < mergedArr.length; a++, b++) {
-            arr[a] = mergedArr[b];
+        for (int a = 0; a < mergedArr.length; a++) {
+            arr[s + a] = mergedArr[a];
         }
 
     }
