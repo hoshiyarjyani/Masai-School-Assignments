@@ -14,7 +14,7 @@ import com.masaischool.exception.NoRecordFoundException;
 import com.masaischool.exception.SomethingWentWrongException;
 
 public class ProductDAOImpl implements ProductDAO {
-	@Override
+	@Override  id cat_id catname
 	public List<ProductDTO> getProductListForCategory(String catId)
 			throws SomethingWentWrongException, NoRecordFoundException {
 		Connection conn = null;
