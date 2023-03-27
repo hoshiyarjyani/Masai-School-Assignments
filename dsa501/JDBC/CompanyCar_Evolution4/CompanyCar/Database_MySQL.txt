@@ -1,0 +1,70 @@
+mysql> create database evolution4;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use evolution4;
+Database changed
+
+mysql> create table company(
+    -> company_id varchar(4) primary key,
+    -> company_name varchar(20) unique not null,
+    -> turnover_in_crores bigint default 0,
+    -> registration_date date
+    -> );
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> desc company;
++--------------------+-------------+------+-----+---------+-------+
+| Field              | Type        | Null | Key | Default | Extra |
++--------------------+-------------+------+-----+---------+-------+
+| company_id         | varchar(4)  | NO   | PRI | NULL    |       |
+| company_name       | varchar(20) | NO   | UNI | NULL    |       |
+| turnover_in_crores | bigint      | YES  |     | 0       |       |
+| registration_date  | date        | YES  |     | NULL    |       |
++--------------------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+
+mysql> create table car(
+    -> car_id varchar(4) primary key,
+    -> model_name varchar(20) unique not null,
+    -> price int not null,
+    -> total_seats int,
+    -> company_id varchar(4),
+    -> Constraint fk_company_car foreign key(company_id) references company(company_id) ON delete cascade);
+Query OK, 0 rows affected (0.08 sec)
+
+
+mysql> desc car;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| car_id      | varchar(4)  | NO   | PRI | NULL    |       |
+| model_name  | varchar(20) | NO   | UNI | NULL    |       |
+| price       | int         | NO   |     | NULL    |       |
+| total_seats | int         | YES  |     | NULL    |       |
+| company_id  | varchar(4)  | YES  | MUL | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> insert into company (company_id,company_name,turnover_in_crores,registration_date) values ("CM01","Suzuki",7542,"1973-01-01");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into company (company_id,company_name,turnover_in_crores,registration_date) values ("CM02","Hyundai",6542,"1994-01-01");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into company (company_id,company_name,turnover_in_crores,registration_date) values ("CM03","Skoda",2542,"2004-01-01");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into company (company_id,company_name,turnover_in_crores,registration_date) values ("CM04","Volkswagen",4956,"2005-01-01");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from company;
++------------+--------------+--------------------+-------------------+
+| company_id | company_name | turnover_in_crores | registration_date |
++------------+--------------+--------------------+-------------------+
+| CM01       | Suzuki       |               7542 | 1973-01-01        |
+| CM02       | Hyundai      |               6542 | 1994-01-01        |
+| CM03       | Skoda        |               2542 | 2004-01-01        |
+| CM04       | Volkswagen   |               4956 | 2005-01-01        |
++------------+--------------+--------------------+-------------------+
+4 rows in set (0.00 sec)
