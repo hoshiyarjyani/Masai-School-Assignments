@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="T" class="com.jyani.Tourist">
+		<constructor-arg name="name" value="Hoshiyar Singh" />
+		<constructor-arg name="age" value="24" />
+		<constructor-arg name="aadhar_id" value="21567854" />
+	</bean>
+	
+	<bean id="d" class="java.sql.Date" factory-method="valueOf">
+		   <constructor-arg value="2022-12-12"/>
+	</bean>
+	
+	<bean id="Hpac" class="com.jyani.HolidayPackage">
+		<property name="package_name" value="Way to Goa" />
+		<property name="package_expiry" ref="d"/>
+		<property name="package_price" value="5600" />
+		<property name="tourist" ref="T"></property>
+	</bean>
+	
+</beans>

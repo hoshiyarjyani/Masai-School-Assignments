@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="emp1" class="com.jyani.Employee">
+		<constructor-arg name="empId" value="1"/>
+		<constructor-arg name="empName" value="Hoshiyar Singh"/>
+		<constructor-arg name="address" value="Jaipur"/>
+		<constructor-arg name="salary" value="45896"/>
+	</bean>
+	
+	
+	 <bean id="emp2" class="com.jyani.Employee">
+        <constructor-arg value="2"/>
+        <constructor-arg value="Rahul"/>
+        <constructor-arg value="Chandigarh"/>
+        <constructor-arg value="60000"/>
+    </bean>
+    
+	<bean id="dep1" class="com.jyani.Department">
+		<constructor-arg name="deptId" value="1"/>
+		<constructor-arg name="deptName" value="HR"/>
+		<constructor-arg name="location" value="Delhi"/>
+	</bean>
+	
+	<bean id="dep2" class="com.jyani.Department">
+		<constructor-arg name="deptId" value="2"/>
+		<constructor-arg name="deptName" value="Engineer"/>
+		<constructor-arg name="location" value="Gurugram"/>
+	</bean>
+	
+	
+	<bean id="depWithEmps" class="java.util.HashMap" >
+		<constructor-arg>
+			<map>
+			<entry key-ref="dep1" value-ref="emp1"/>
+			<entry key-ref="dep2" value-ref="emp2"/>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	
+	<bean id="demo" class="com.jyani.Demo" scope="prototype" init-method="myInit" destroy-method="cleanUp" lazy-init="true">
+		<property name="theMap" ref="depWithEmps"></property>
+	</bean>
+	
+</beans>
