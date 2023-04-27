@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="artist1" class="com.masai.Artist">
+		<property name="id" value="1" />
+		<property name="name" value="Abc" />
+		<property name="age" value="23" />
+		<property name="noOfArtworksCreated" value="4" />
+		<property name="email" value="aabc@gmail.com" />
+		<property name="mobile" value="12345" />
+	</bean>
+	<bean id="artist2" class="com.masai.Artist">
+		<property name="id" value="2" />
+		<property name="name" value="Bcd" />
+		<property name="age" value="22" />
+		<property name="noOfArtworksCreated" value="8" />
+		<property name="email" value="apbc@gmail.com" />
+		<property name="mobile" value="1255645" />
+	</bean>
+	<bean id="artist3" class="com.masai.Artist">
+		<property name="id" value="3" />
+		<property name="name" value="Cde" />
+		<property name="age" value="23" />
+		<property name="noOfArtworksCreated" value="7" />
+		<property name="email" value="cds@gmail.com" />
+		<property name="mobile" value="8541545" />
+	</bean>
+	<bean id="artist4" class="com.masai.Artist">
+		<property name="id" value="4" />
+		<property name="name" value="Abc" />
+		<property name="age" value="23" />
+		<property name="noOfArtworksCreated" value="4" />
+		<property name="email" value="aabc@gmail.com" />
+		<property name="mobile" value="12345" />
+	</bean>
+	<bean id="artist5" class="com.masai.Artist">
+		<property name="id" value="5" />
+		<property name="name" value="sdd" />
+		<property name="age" value="23" />
+		<property name="noOfArtworksCreated" value="3" />
+		<property name="email" value="kmkbc@gmail.com" />
+		<property name="mobile" value="86245" />
+	</bean>
+	<bean id="artist6" class="com.masai.Artist">
+		<property name="id" value="6" />
+		<property name="name" value="dsd" />
+		<property name="age" value="25" />
+		<property name="noOfArtworksCreated" value="4" />
+		<property name="email" value="alc@gmail.com" />
+		<property name="mobile" value="84564" />
+	</bean>
+	<bean id="artwork1" class="com.masai.Artwork">
+		<property name="id" value="1" />
+		<property name="name" value="qwe" />
+		<property name="creationTime" value="9" />
+	</bean>
+	<bean id="artwork2" class="com.masai.Artwork">
+		<property name="id" value="2" />
+		<property name="name" value="rwe" />
+		<property name="creationTime" value="2" />
+	</bean>
+	<bean id="artwork3" class="com.masai.Artwork">
+		<property name="id" value="3" />
+		<property name="name" value="sfsd" />
+		<property name="creationTime" value="3" />
+	</bean>
+	<bean id="artwork4" class="com.masai.Artwork">
+		<property name="id" value="4" />
+		<property name="name" value="sd" />
+		<property name="creationTime" value="6" />
+	</bean>
+	<bean id="artistService" class="com.masai.ArtistService">
+		<property name="artworkMap">
+			<map>
+				<entry key-ref="artist1" value-ref="artwork1" />
+				<entry key-ref="artist2" value-ref="artwork2" />
+				<entry key-ref="artist3" value-ref="artwork3" />
+				<entry key-ref="artist4" value-ref="artwork4" />
+			</map>
+		</property>
+		<property name="artistList">
+			<list>
+				<ref bean="artist1" />
+				<ref bean="artist2" />
+				<ref bean="artist3" />
+				<ref bean="artist4" />
+				<ref bean="artist5" />
+				<ref bean="artist6" />
+			</list>
+		</property>
+	</bean>
+</beans>
