@@ -16,14 +16,14 @@ class Main {
             int st = 0;
             int sum = 0;
             int len = 0;
-            for (int i = 0; i < n; i++) {
-                sum += arr[i];
+            for (int end = 0; end < n; end++) {
+                sum += arr[end];
                 while (sum > k) {
                     sum = sum - arr[st];
                     st++;
                 }
 
-                len = i - st + 1;
+                len = end - st + 1;
                 maxlen = Math.max(maxlen, len);
 
             }
