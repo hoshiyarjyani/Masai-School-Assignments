@@ -16,7 +16,7 @@ class Main {
                 min += x;
             } else if (ch >= 'A' && ch <= 'Z') {
                 int y = 'A' - ch - 1;
-                plus += y;
+                plus  += y;
             }
         }
 
