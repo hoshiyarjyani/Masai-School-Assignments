@@ -21,3 +21,12 @@ class Main {
         System.out.println(max);
     }
 }
+
+// Input
+
+// 6
+// 4 1 7 4 1 4
+
+// Output
+
+// 2
