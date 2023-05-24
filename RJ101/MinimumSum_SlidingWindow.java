@@ -28,3 +28,16 @@ class MinimumSum_SlidingWindow {
         }
     }
 }
+
+// Input
+
+// 2
+// 5 3
+// 9 9 -5 9 5
+// 5 4
+// 2 7 6 2 -5
+
+// Output
+
+// 9
+// 10
