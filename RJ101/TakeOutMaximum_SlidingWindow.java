@@ -26,3 +26,11 @@ class TakeOutMaximum_SlidingWindow {
         System.out.println(max);
     }
 }
+// Input
+
+// 10 3
+// -1 -1 -2 1 -2 4 1 9 3 9
+
+// Output
+
+// 21
