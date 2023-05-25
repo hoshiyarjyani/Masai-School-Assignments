@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: TestCases
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.177 s - in TestCases
+basicChecks  Time elapsed: 0.051 s
+registerCollege  Time elapsed: 2.332 s
+registerCollegeException  Time elapsed: 0.006 s
+getCollegeFromCollegeId  Time elapsed: 0.018 s
+getCollegeFromCollegeIdException  Time elapsed: 0.015 s
+getAllCollege  Time elapsed: 0.316 s
+getAllCollegeException  Time elapsed: 0.048 s
+registerStudentToCollege  Time elapsed: 0.067 s
+registerStudentToCollegeException  Time elapsed: 0.038 s
+getAllStudentsFromCollegeId  Time elapsed: 0.036 s
+getAllStudentsFromCollegeIdException  Time elapsed: 0.039 s
+registerStudent  Time elapsed: 0.013 s
+registerStudentException  Time elapsed: 0.007 s
+getStudentFromCollegeId  Time elapsed: 0.014 s
+getStudentFromCollegeIdException  Time elapsed: 0.012 s
+getAllActiveStudents  Time elapsed: 0.041 s
+getAllActiveStudentsException  Time elapsed: 0.04 s
+getCollegeFromStudentId  Time elapsed: 0.033 s
+getCollegeFromStudentIdsException  Time elapsed: 0.021 s
+buildScore  Time elapsed: 0.002 s
