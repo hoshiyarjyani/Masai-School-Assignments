@@ -34,3 +34,16 @@ class Main {
         }
     }
 }
+
+// Input
+
+// 3
+// {([])}
+// ()
+// ([]
+
+// Output
+
+// balanced
+// balanced
+// not balanced
