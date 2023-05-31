@@ -50,7 +50,6 @@ class Main {
 
 // Output
 
-
 // 4
 // 4
 // 2
