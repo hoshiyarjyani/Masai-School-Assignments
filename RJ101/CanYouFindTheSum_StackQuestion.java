@@ -53,3 +53,11 @@ public class Main {
     }
 }
 
+// Input
+
+// 5
+// 5 4 1 3 2
+
+// Output
+
+// -2 0 6 1 3
