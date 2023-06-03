@@ -25,3 +25,12 @@ class Main {
         System.out.println(count);
     }
 }
+
+// Input
+
+// 9 6
+// 4 3 7 6 7 2 2 2 2
+
+// Output
+
+// 3
