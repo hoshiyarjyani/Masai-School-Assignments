@@ -35,3 +35,11 @@ class Main {
         return ans + 1;
     }
 }
+
+// Input
+
+// 4 5184 2 3
+
+// Output
+
+// 8
