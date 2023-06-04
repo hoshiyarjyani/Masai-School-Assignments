@@ -21,3 +21,23 @@ class Main {
         myFun(index + 1, n, r);
     }
 }
+
+
+Input 1 
+
+1 1
+
+Output 1
+
+2.0000
+
+
+
+
+Input 2
+
+3 5
+
+Output 2
+
+1.2480
