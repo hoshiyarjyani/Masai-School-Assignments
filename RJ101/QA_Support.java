@@ -51,3 +51,5 @@ No
 Yes
 No
 Yes
+
+https://oj.masaischool.com/contest/9258/problem/201
