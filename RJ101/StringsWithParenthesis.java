@@ -26,3 +26,19 @@ class Main {
 
     }
 }
+
+Sample Input 1
+
+(((((((((())))))))))
+
+Sample Output 1
+
+balanced
+
+Sample Input 2
+
+[one[two[three[four[five[six[seven[eight[nine[ten]]]]]]]]]]
+
+Sample Output 2
+
+balanced
