@@ -42,3 +42,6 @@ Sample Input 2
 Sample Output 2
 
 balanced
+
+
+https://oj.masaischool.com/contest/9258/problem/401
