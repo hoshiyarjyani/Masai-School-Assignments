@@ -29,3 +29,25 @@ class Main {
 }
 
 
+Sample Input
+
+5
+4
+QQAA
+4
+QQAQ
+3
+QAA
+1
+Q
+14
+QAQQAQAAQQQAAA
+
+
+Sample Output
+
+Yes
+No
+Yes
+No
+Yes
