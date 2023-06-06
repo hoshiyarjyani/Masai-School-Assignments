@@ -29,3 +29,16 @@ class Main {
         }
     }
 }
+
+Sample Input
+
+2
+9
+10 5 20 20 4 5 2 25 1
+10
+3 4 21 36 10 28 35 5 24 42
+
+Sample Output
+
+2 4
+4 0
