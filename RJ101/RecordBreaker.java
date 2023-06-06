@@ -42,3 +42,5 @@ Sample Output
 
 2 4
 4 0
+
+https://oj.masaischool.com/contest/9259/problem/101
