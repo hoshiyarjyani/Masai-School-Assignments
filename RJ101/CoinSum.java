@@ -26,3 +26,13 @@ public class Main {
         }
     }
 }
+
+Input
+
+3
+3 5 2 
+
+Output
+
+6
+2 3 5 7 8 10 
