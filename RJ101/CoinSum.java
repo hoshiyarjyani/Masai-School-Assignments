@@ -36,3 +36,6 @@ Output
 
 6
 2 3 5 7 8 10 
+
+
+https://oj.masaischool.com/contest/9282/problem/101
