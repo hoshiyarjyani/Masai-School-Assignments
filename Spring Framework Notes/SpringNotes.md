@@ -1,5 +1,7 @@
 # Spring Notes
+
 Notion Notes Link - https://cherry-celery-c43.notion.site/Spring-Notes-9780432c94714c049806d9fdd93c4141?pvs=4
+
 **Q: What are the major features of Spring 5?**
 A: Some of the major features of Spring 5 include:
 
@@ -186,7 +188,7 @@ A: Setter injection for objects involves injecting dependencies that are other o
 Setter injection for literal values involves injecting dependencies that are simple values such as strings, numbers, or boolean values. The class declares a private field for each dependency and provides a public setter method for each field. The container invokes these setter methods and provides the necessary literal values as dependencies.
 
 **Q: Explain injection of Java Collection types.**
-A: Injection of Java Collection types involves injecting dependencies that are collections such as lists, sets, or maps. The class declares a private field of the corresponding collection type and provides a public setter method for the field. The container invokes this setter method and provides the necessary collection as a dependency. The container can populate the collection with values from the configuration or other sources.
+ A: Injection of Java Collection types involves injecting dependencies that are collections such as lists, sets, or maps. The class declares a private field of the corresponding collection type and provides a public setter method for the field. The container invokes this setter method and provides the necessary collection as a dependency. The container can populate the collection with values from the configuration or other sources.
 
 **Q: What is the difference between constructor and setter injection?**
 A: The main differences between constructor injection and setter injection are:
