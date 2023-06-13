@@ -6,9 +6,9 @@ public class Main {
         Scanner sr = new Scanner(System.in);
         int n = sr.nextInt();
         String str = sr.next();                               
-        leftRight(str);
+        ght(str);
     }
-    static void leftRight(String str) {
+    static void ght(String str) {
         List<Integer> arr = new ArrayList<>();
         int j = 0;
         arr.add(j,0);

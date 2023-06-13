@@ -6,6 +6,7 @@ class RotateTheArrayGivenTimes {
         int tc = sc.nextInt();
         while (tc-- > 0) {
             int n = sc.nextInt();
+            
             int t = sc.nextInt();
             int[] arr = new int[n];
             for (int i = 0; i < n; i++) {
