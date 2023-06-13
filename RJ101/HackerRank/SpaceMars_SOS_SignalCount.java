@@ -113,3 +113,5 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
+https://www.hackerrank.com/challenges/mars-exploration/problem?isFullScreen=true&h_r=next-challenge&h_v=zen
