@@ -69,7 +69,7 @@ class Result {
      * The function accepts STRING s as parameter.
      */
     public static String funnyString(String s) {
-        
+
         String rev = new StringBuilder(s).reverse().toString();
         int[] str = new int[s.length() - 1];
         int[] con = new int[s.length() - 1];
@@ -115,3 +115,5 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
+https://www.hackerrank.com/challenges/funny-string/problem
