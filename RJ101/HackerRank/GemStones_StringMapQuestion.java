@@ -23,7 +23,6 @@
 
 // Constraints
 
-
 //  | arr[i] | 
 // Each composition  consists of only lower-case Latin letters ('a'-'z').
 
@@ -42,4 +41,74 @@
 
 // Only  and  occur in every rock.
 
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
+class Result {
+
+    /*
+     * Complete the 'gemstones' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts STRING_ARRAY arr as parameter.
+     */
+
+    public static int gemstones(List<String> arr) {
+        Map<Character, Integer> map = new HashMap<>();
+        int numRocks = arr.size();
+
+        for (String rock : arr) {
+            Set<Character> mineralsInRock = new HashSet<>();
+            for (char mineral : rock.toCharArray()) {
+                mineralsInRock.add(mineral);
+            }
+
+            for (char mineral : mineralsInRock) {
+                if (map.containsKey(mineral)) {
+                    map.put(mineral, map.get(mineral) + 1);
+                } else {
+                    map.put(mineral, 1);
+                }
+            }
+        }
+
+        int gemstonesCount = 0;
+        for (int count : map.values()) {
+            if (count == numRocks) {
+                gemstonesCount++;
+            }
+        }
+
+        return gemstonesCount;
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<String> arr = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            String arrItem = bufferedReader.readLine();
+            arr.add(arrItem);
+        }
+
+        int result = Result.gemstones(arr);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
