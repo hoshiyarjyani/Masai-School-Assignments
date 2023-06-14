@@ -112,3 +112,5 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
+https://www.hackerrank.com/challenges/gem-stones/problem?h_r=next-challenge&h_v=zen
