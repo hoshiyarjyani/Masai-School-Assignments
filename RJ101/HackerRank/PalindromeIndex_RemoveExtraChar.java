@@ -106,3 +106,5 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
+https://www.hackerrank.com/challenges/palindrome-index/problem?isFullScreen=true
