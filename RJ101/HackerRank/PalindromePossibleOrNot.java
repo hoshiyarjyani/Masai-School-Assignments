@@ -54,3 +54,52 @@
 // Explanation 2
 
 // An example palindrome from the string: ddcceefeeccdd.
+
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public static String gameOfThrones(String s) {
+        int n = s.length();
+        if (n == 1) {
+            return "YES";
+        } else {
+            Map<Character, Integer> map = new HashMap<>();
+
+            // Count the occurrences of characters in s
+            for (int i = 0; i < n; i++) {
+                char ch = s.charAt(i);
+                map.put(ch, map.getOrDefault(ch, 0) + 1);
+            }
+
+            int count = 0;
+            for (int value : map.values()) {
+                if (count > 1) {
+                    return "NO";
+                } else if (value % 2 == 1) {
+                    count++;
+                }
+            }
+
+            return "YES";
+        }
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s = bufferedReader.readLine();
+
+        String result = Result.gameOfThrones(s);
+
+        bufferedWriter.write(result);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
