@@ -23,7 +23,6 @@
 
 // Constraints
 
-
 //  consists only of characters in the range ascii[a-z].
 // Sample Input
 
@@ -56,5 +55,71 @@
 
 // Test Case #06: Here S1 = "xaxb" and S2 = "bbxx". You must replace 'a' from S1 with 'b' so that S1 = "xbxb".
 
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
+class Result {
 
+    /*
+     * Complete the 'anagram' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts STRING s as parameter.
+     */
+
+    public static int anagram(String s) {
+        // Write your code here
+        int n = s.length();
+        if (n % 2 == 1) {
+            return -1;
+        } else {
+            Map<Character, Integer> map = new HashMap<>();
+            for (int i = 0; i < n / 2; i++) {
+                if (map.containsKey(s.charAt(i))) {
+                    map.put(s.charAt(i), map.get(s.charAt(i)) + 1);
+                } else {
+                    map.put(s.charAt(i), 1);
+                }
+            }
+            for (int i = n / 2; i < n; i++) {
+                if (map.containsKey(s.charAt(i)) && map.get(s.charAt(i)) > 0) {
+                    map.put(s.charAt(i), map.get(s.charAt(i)) - 1);
+                }
+            }
+
+            int count = 0;
+            for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+                Integer value = entry.getValue();
+                count += value;
+            }
+            return count;
+        }
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int q = Integer.parseInt(bufferedReader.readLine().trim());
+
+        for (int qItr = 0; qItr < q; qItr++) {
+            String s = bufferedReader.readLine();
+
+            int result = Result.anagram(s);
+
+            bufferedWriter.write(String.valueOf(result));
+            bufferedWriter.newLine();
+        }
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
