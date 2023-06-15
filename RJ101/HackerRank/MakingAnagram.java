@@ -6,7 +6,6 @@
 
 // Example.
 
-
 // The only characters that match are the 's so we have to remove  from  and  from  for a total of  deletions.
 
 // Function Description
@@ -43,4 +42,62 @@
 // Remove a and b from abc to get c.
 //  characters have to be deleted to make both strings anagrams.
 
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
+class Result {
+
+    public static int makingAnagrams(String s1, String s2) {
+        int n1 = s1.length();
+        int n2 = s2.length();
+        Map<Character, Integer> map = new HashMap<>();
+
+        // Count the occurrences of characters in s1
+        for (int i = 0; i < n1; i++) {
+            char ch = s1.charAt(i);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+
+        int deletions = 0;
+
+        // Check the occurrences of characters in s2 and calculate deletions
+        for (int i = 0; i < n2; i++) {
+            char ch = s2.charAt(i);
+            if (map.containsKey(ch) && map.get(ch) > 0) {
+                map.put(ch, map.get(ch) - 1);
+            } else {
+                deletions++;
+            }
+        }
+
+        // Add the remaining characters in s1 to deletions
+        for (int count : map.values()) {
+            deletions += count;
+        }
+
+        return deletions;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s1 = bufferedReader.readLine();
+        String s2 = bufferedReader.readLine();
+
+        int result = Result.makingAnagrams(s1, s2);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
