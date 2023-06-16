@@ -26,8 +26,6 @@
 
 // Constraints
 
-
-
 // Output Format
 
 // Print the following  lines, each to  decimals:
@@ -51,3 +49,50 @@
 // There are  positive numbers,  negative numbers, and  zero in the array.
 // The proportions of occurrence are positive: , negative:  and zeros: .
 
+import java.io.*;
+import java.util.*;
+import java.util.stream.*;
+
+class Result {
+
+    public static void plusMinus(List<Integer> arr) {
+        int n = arr.size();
+        int positiveCount = 0;
+        int negativeCount = 0;
+        int zeroCount = 0;
+
+        for (int num : arr) {
+            if (num > 0) {
+                positiveCount++;
+            } else if (num < 0) {
+                negativeCount++;
+            } else {
+                zeroCount++;
+            }
+        }
+
+        double positiveRatio = (double) positiveCount / n;
+        double negativeRatio = (double) negativeCount / n;
+        double zeroRatio = (double) zeroCount / n;
+
+        System.out.printf("%.6f%n", positiveRatio);
+        System.out.printf("%.6f%n", negativeRatio);
+        System.out.printf("%.6f%n", zeroRatio);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+                .map(Integer::parseInt)
+                .collect(Collectors.toList());
+
+        Result.plusMinus(arr);
+
+        bufferedReader.close();
+    }
+}
