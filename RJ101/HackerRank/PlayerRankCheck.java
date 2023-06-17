@@ -125,7 +125,7 @@ class Result {
         List<Integer> res = new ArrayList<>();
 
         List<Integer> uniqueRanked = ranked.stream().distinct().collect(Collectors.toList());
-        
+
         int n = uniqueRanked.size();
         int m = player.size();
         int i = n - 1;
@@ -171,3 +171,6 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
+
+https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem?isFullScreen=true
