@@ -79,6 +79,31 @@ class Result {
         System.out.printf("%.6f%n", negativeRatio);
         System.out.printf("%.6f%n", zeroRatio);
     }
+
+Other Approch
+
+    public static void plusMinus(List<Integer> arr) {
+        double pos = 0;
+        double neg = 0;
+        double zero = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) == 0) {
+                zero++;
+            } else if (arr.get(i) > 0) {
+                pos++;
+            } else {
+                neg++;
+            }
+        }
+
+        System.out.println(String.format("%.6f", pos / arr.size()));
+
+        System.out.println(String.format("%.6f", neg / arr.size()));
+
+        System.out.println(String.format("%.6f", zero / arr.size()));
+
+    }
+
 }
 
 public class Solution {
@@ -97,5 +122,4 @@ public class Solution {
     }
 }
 
-
-https://www.hackerrank.com/challenges/plus-minus/problem
+https:// www.hackerrank.com/challenges/plus-minus/problem
