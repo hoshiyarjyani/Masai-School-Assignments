@@ -55,3 +55,6 @@ class Main {
         }
     }
 }
+
+
+https://oj.masaischool.com/contest/5870/problem/02
