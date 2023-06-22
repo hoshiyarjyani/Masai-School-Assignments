@@ -6,9 +6,81 @@ Input The first line of the input contains one integer t(1 st≤10)-the number o
 
 Output For each test case,print the answer:The number of elements of the matrix which are odd.
 
-Sample Input 2 2 2 4 0 1 0 0 0 0 1 1 4 4 10 0 1 0 2 0 0 0 1 0 1 0 1 1 1 1 1 1 3 1 0
+Sample Input
+2
+2 2 
+4
+0 1
+0 0
+0 0
+1 1
+4 4
+10
+0 1
+0 2
+0 0
+0 1
+0 1
+0 1
+1 1
+1 1
+1 3
+1 0
 
-Sample Output 2 8
+Sample Output
+2
+8
+
+
+
+//  1st Approch
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int tc = sc.nextInt();  
+        for (int i = 0; i < tc; i++) {
+            int r = scanner.nextInt();  
+            int c = scanner.nextInt();  
+
+            int[] rowCount = new int[r]; // Track row increments
+            int[] colCount = new int[c]; // Track column increments
+
+            int q = scanner.nextInt();  
+            for (int j = 0; j < q; j++) {
+                int type = scanner.nextInt();
+                int index = scanner.nextInt();
+
+                if (type == 0) {
+                    rowCount[index]++; // Increment row count
+                } else {
+                    colCount[index]++; // Increment column count
+                }
+            }
+
+            int oddCount = 0;  
+
+            // Calculate odd elements based on row and column increments
+            for (int j = 0; j < r; j++) {
+                for (int k = 0; k < c; k++) {
+                    int totalIncrements = rowCount[j] + colCount[k];
+                    if (totalIncrements % 2 != 0) {
+                        oddCount++;
+                    }
+                }
+            }
+
+            System.out.println(oddCount);
+        }
+    }
+}
+
+
+
+
+// 2nd Approch
 
 import java.util.Scanner;
 
@@ -55,6 +127,59 @@ class Main {
         }
     }
 }
+
+
+// 3rd Approch - But TLE
+
+import java.util.Scanner;
+
+public class SherlockAndQueries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Number of test cases
+
+        for (int i = 0; i < t; i++) {
+            int n = sc.nextInt(); // Number of rows
+            int m = sc.nextInt(); // Number of columns
+            int[][] matrix = new int[n][m]; // Matrix
+
+            int q = sc.nextInt(); // Number of queries
+
+            // Execute queries
+            for (int j = 0; j < q; j++) {
+                int type = scanner.nextInt();
+                int index = scanner.nextInt();
+
+                if (type == 0) {
+                    // Update row elements
+                    for (int k = 0; k < m; k++) {
+                        matrix[index][k]++;
+                    }
+                } else {
+                    // Update column elements
+                    for (int k = 0; k < n; k++) {
+                        matrix[k][index]++;
+                    }
+                }
+            }
+
+            int oddCount = 0; // Count of odd elements
+
+            // Count odd elements
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < m; k++) {
+                    if (matrix[j][k] % 2 != 0) {
+                        oddCount++;
+                    }
+                }
+            }
+
+            System.out.println(oddCount);
+        }
+ 
+    }
+}
+
 
 
 https://oj.masaischool.com/contest/5870/problem/02
