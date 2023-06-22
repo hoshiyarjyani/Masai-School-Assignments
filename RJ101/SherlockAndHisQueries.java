@@ -14,14 +14,14 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int t = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
         for (int i = 0; i < t; i++) {
-            int n = scanner.nextInt();
-            int m = scanner.nextInt();
+            int n = sc.nextInt();
+            int m = sc.nextInt();
             int[][] matrix = new int[n][m];
 
-            int q = scanner.nextInt();
+            int q = sc.nextInt();
 
             int[] rowCounts = new int[n]; // Track row counts
             int[] colCounts = new int[m]; // Track column counts
