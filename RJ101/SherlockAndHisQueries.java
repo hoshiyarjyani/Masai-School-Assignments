@@ -42,16 +42,16 @@ class Main {
         Scanner sc = new Scanner(System.in);
         int tc = sc.nextInt();  
         for (int i = 0; i < tc; i++) {
-            int r = scanner.nextInt();  
-            int c = scanner.nextInt();  
+            int r = sc.nextInt();  
+            int c = sc.nextInt();  
 
             int[] rowCount = new int[r]; // Track row increments
             int[] colCount = new int[c]; // Track column increments
 
-            int q = scanner.nextInt();  
+            int q = sc.nextInt();  
             for (int j = 0; j < q; j++) {
-                int type = scanner.nextInt();
-                int index = scanner.nextInt();
+                int type = sc.nextInt();
+                int index = sc.nextInt();
 
                 if (type == 0) {
                     rowCount[index]++; // Increment row count
@@ -99,8 +99,8 @@ class Main {
             int[] colCounts = new int[m]; // Track column counts
 
             for (int j = 0; j < q; j++) {
-                int type = scanner.nextInt();
-                int index = scanner.nextInt();
+                int type = sc.nextInt();
+                int index = sc.nextInt();
 
                 if (type == 0) {
                     // Update row count
@@ -147,8 +147,8 @@ public class SherlockAndQueries {
 
             // Execute queries
             for (int j = 0; j < q; j++) {
-                int type = scanner.nextInt();
-                int index = scanner.nextInt();
+                int type = sc.nextInt();
+                int index = sc.nextInt();
 
                 if (type == 0) {
                     // Update row elements
