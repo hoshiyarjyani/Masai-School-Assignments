@@ -49,84 +49,111 @@ package conceptofjava;
 import java.util.*;
 
 class song {
-    // complete the class as mentioned in the problem statement above
+	// complete the class as mentioned in the problem statement above
 
-    String name;
-    int duration;
-    int popularity;
+	String name;
+	int duration;
+	int popularity;
 
-    song(int duration, String name, int popularity) {
-        this.name = name;
-        this.duration = duration;
-        this.popularity = popularity;
-    }
+	song(int duration, String name, int popularity) {
+		this.name = name;
+		this.duration = duration;
+		this.popularity = popularity;
+	}
 
 }
 
 class chartlist {
-    // complete the class as mentioned in the problem statement above
-    int n;
-    song[] arr;
+	// complete the class as mentioned in the problem statement above
+	int n;
+	song[] arr;
 
-    public chartlist(int n, song[] arr) {
-        this.n = n;
-        this.arr = arr;
-    }
+	public chartlist(int n, song[] arr) {
+		this.n = n;
+		this.arr = arr;
+	}
 
-    String[] top_five() {
-        Arrays.sort(arr, (a, b) -> a.popularity - b.popularity);
-        song[] topFive = new song[5];
+	String[] top_five() {
 
-        for (int i = 0; i < 5; i++) {
-            topFive[i] = arr[i];
-        }
+// Arrays.sort(arr, (a, b) -> a.popularity - b.popularity);
 
-        // alternate
+ // alternate Using Comparator
+        
         // Arrays.sort(topFive, new Comparator<song>() {
         // public int compare(song a, song b) {
         // return a.popularity - b.popularity;
         // }
         // });
+        
+		// Selection sort
+//  for(int i = 0; i<arr.length-1; i++){
+//      for(int j = i+1; j<arr.length; j++){
+//          if(arr[i].popularity>arr[j].popularity){
+//              song temp = arr[i];
+//              arr[i] = arr[j];
+//              arr[j] = temp;
+//          }
+//      }
+//  }
 
-        String[] topFiveNames = new String[5];
-        for (int i = 0; i < 5; i++) {
-            topFiveNames[i] = topFive[i].name;
-        }
-        return topFiveNames;
-    }
+		// bubble sort
 
-    String leastPopular() {
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = 0; j < arr.length - i - 1; j++) {
+				if (arr[j].popularity > arr[j + 1].popularity) {
+					// Swap elements
+					song temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+		}
 
-        song leastPopular = arr[arr.length - 1];
+		song[] topFive = new song[5];
 
-        return leastPopular.name;
+		for (int i = 0; i < 5; i++) {
+			topFive[i] = arr[i];
+		}
 
-    }
+		String[] topFiveNames = new String[5];
+		for (int i = 0; i < 5; i++) {
+			topFiveNames[i] = topFive[i].name;
+		}
+		return topFiveNames;
+	}
 
-    public String mostPopular() {
-        song mostPopular = arr[0];
+	String leastPopular() {
 
-        return mostPopular.name;
-    }
+		song leastPopular = arr[arr.length - 1];
 
-    public String longestSong() {
-        song longestSong = arr[0];
-        for (int i = 1; i < n; i++) {
-            if (arr[i].duration > longestSong.duration) {
-                longestSong = arr[i];
-            }
-        }
-        return longestSong.name;
-    }
+		return leastPopular.name;
 
-    public String shortestSong() {
-        song shortestSong = arr[0];
-        for (int i = 1; i < n; i++) {
-            if (arr[i].duration < shortestSong.duration) {
-                shortestSong = arr[i];
-            }
-        }
-        return shortestSong.name;
-    }
+	}
+
+	public String mostPopular() {
+		song mostPopular = arr[0];
+
+		return mostPopular.name;
+	}
+
+	public String longestSong() {
+		song longestSong = arr[0];
+		for (int i = 1; i < n; i++) {
+			if (arr[i].duration > longestSong.duration) {
+				longestSong = arr[i];
+			}
+		}
+		return longestSong.name;
+	}
+
+	public String shortestSong() {
+		song shortestSong = arr[0];
+		for (int i = 1; i < n; i++) {
+			if (arr[i].duration < shortestSong.duration) {
+				shortestSong = arr[i];
+			}
+		}
+		return shortestSong.name;
+	}
 
 }
