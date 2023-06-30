@@ -32,3 +32,19 @@ class InvalidDateFormatException extends Exception {
         super(message);
     }
 }
+
+
+Sample Input
+4
+2000-10-06
+2000/10/06
+2000-04-01
+2500-05-01
+
+Sample Output
+Age is 22
+Invalid date format provided
+Age is 23
+Date should not be in future
+
+Question Link - https://oj.masaischool.com/contest/9242/problem/3 
