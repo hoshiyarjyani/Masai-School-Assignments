@@ -34,3 +34,5 @@ Sample Input
 Sample Output
 2
 2
+
+https://oj.masaischool.com/contest/9542/problem/10
