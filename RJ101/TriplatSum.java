@@ -11,7 +11,7 @@ class Main {
                 list.add(sc.nextInt());
             }
             boolean check = false;
-            Collections.sort(list);
+            //Collections.sort(list);
             for (int i = 0; i < n - 1; i++) {
                 for (int j = i + 1; j < n; j++) {
                     if (list.contains(list.get(i) + list.get(j))) {
