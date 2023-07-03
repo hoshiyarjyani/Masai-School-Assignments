@@ -37,3 +37,5 @@ Sample Input
 Sample Output
 1
 
+
+https://oj.masaischool.com/contest/9542/problem/09
