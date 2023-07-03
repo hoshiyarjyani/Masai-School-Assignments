@@ -24,3 +24,13 @@ class Main {
         return (int) x;
     }
 }
+
+
+Sample Input
+2
+4
+8
+
+Sample Output
+2
+2
