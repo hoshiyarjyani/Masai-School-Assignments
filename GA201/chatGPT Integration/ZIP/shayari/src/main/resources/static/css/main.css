@@ -1,0 +1,27 @@
+body {
+	font-size: xxx-large;
+}
+
+.starter-template {
+	text-align: center;
+}
+
+input {
+	font-size: xxx-large;
+	padding: 5px;
+	margin: 5px;
+	border: inset;
+	width: 100%;
+}
+
+fieldset {
+	border: none;	
+}
+
+h1 {
+	color: #ff00ff;
+}
+
+h2 {
+	color: #000000;
+}
