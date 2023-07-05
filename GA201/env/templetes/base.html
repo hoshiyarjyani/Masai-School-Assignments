@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zomato Chronicles: The Great Food Fiasco</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Zomato Chronicles: The Great Food Fiasco</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('show_menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('show_orders') }}">Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
