@@ -26,3 +26,5 @@ class Main {
         }
     }
 }
+
+https://oj.masaischool.com/contest/9241/problem/101
