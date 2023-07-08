@@ -27,4 +27,12 @@ class Main {
     }
 }
 
+Sample Input
+1
+9
+1 8 6 2 5 4 8 3 7
+
+Sample Output
+49
+
 https://oj.masaischool.com/contest/9241/problem/101
