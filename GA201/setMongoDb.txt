@@ -1,0 +1,532 @@
+ **Problem 16: Create a Restaurants table / collection**
+
+**MySQL:**
+ 
+CREATE TABLE Restaurants (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    cuisine_type VARCHAR(100),
+    location VARCHAR(255),
+    average_rating DECIMAL(3,2),
+    delivery_available BOOLEAN
+);
+ 
+
+**MongoDB:**
+ 
+db.createCollection("Restaurants")
+ 
+
+**Problem 17: Insert data into the Restaurants table / collection**
+
+**MySQL:**
+ 
+INSERT INTO Restaurants (id, name, cuisine_type, location, average_rating, delivery_available)
+VALUES
+    (1, 'Restaurant A', 'Italian', 'New York', 4.5, true),
+    (2, 'Restaurant B', 'Chinese', 'London', 4.2, true),
+    (3, 'Restaurant C', 'Mexican', 'Los Angeles', 3.8, false),
+    (4, 'Restaurant D', 'Indian', 'Mumbai', 4.7, true),
+    (5, 'Restaurant E', 'French', 'Paris', 4.9, true);
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.insertMany([
+  {
+    name: "Restaurant A",
+    cuisine_type: "Italian",
+    location: "New York",
+    average_rating: 4.5,
+    delivery_available: true
+  },
+  {
+    name: "Restaurant B",
+    cuisine_type: "Chinese",
+    location: "London",
+    average_rating: 4.2,
+    delivery_available: true
+  },
+  {
+    name: "Restaurant C",
+    cuisine_type: "Mexican",
+    location: "Los Angeles",
+    average_rating: 3.8,
+    delivery_available: false
+  },
+  {
+    name: "Restaurant D",
+    cuisine_type: "Indian",
+    location: "Mumbai",
+    average_rating: 4.7,
+    delivery_available: true
+  },
+  {
+    name: "Restaurant E",
+    cuisine_type: "French",
+    location: "Paris",
+    average_rating: 4.9,
+    delivery_available: true
+  }
+]);
+ 
+
+**Problem 18: Fetch all restaurants, ordered by average_rating in descending order**
+
+**MySQL:**
+ 
+SELECT * FROM Restaurants ORDER BY average_rating DESC;
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.find().sort({ average_rating: -1 });
+ 
+
+**Problem 19: Fetch all restaurants that offer delivery_available and have an average_rating of more than 4**
+
+**MySQL:**
+ 
+SELECT * FROM Restaurants WHERE delivery_available = true AND average_rating > 4;
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.find({ delivery_available: true, average_rating: { $gt: 4 } });
+ 
+
+**Problem 20: Fetch all restaurants where the cuisine_type field is not set or is null**
+
+**MySQL:**
+ 
+SELECT * FROM Restaurants WHERE cuisine_type IS NULL OR cuisine_type = '';
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.find({ $or: [{ cuisine_type: null }, { cuisine_type: "" }] });
+ 
+
+**Problem 21: Count the number of restaurants that have delivery_available**
+
+**MySQL:**
+ 
+SELECT COUNT(*) FROM Restaurants WHERE delivery_available = true;
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.countDocuments({ delivery_available: true });
+ 
+
+**Problem 22: Fetch all restaurants whose location contains 'New York'**
+
+**MySQL:**
+ 
+SELECT * FROM Restaurants WHERE location LIKE '%New York%';
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.find({ location: /New York/ });
+ 
+
+**Problem 23: Calculate the average average_rating of all restaurants**
+
+**MySQL:**
+ 
+SELECT AVG(average_rating) FROM Restaurants;
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.aggregate([
+  { $group: { _id: null, averageRating: { $avg: "$average_rating" } } }
+]);
+ 
+
+**Problem 24: Fetch the top 5 restaurants when ordered by average_rating in descending order**
+
+**MySQL:**
+ 
+SELECT * FROM Restaurants ORDER BY average_rating DESC LIMIT 5;
+ 
+
+**MongoDB:**
+ 
+db.Restaurants.find().sort({ average_rating: -1 }).limit(5);
+ 
+
+**Problem 25: Delete the restaurant with id 3**
+
+ 
+DELETE FROM Restaurants WHERE id = 3;
+ 
+ 
+db.Restaurants.deleteOne({ id: 3 });
+ 
+
+**Problem 26: Create a Rides table / collection**
+
+**MySQL:**
+ 
+CREATE TABLE Rides (
+    id INT PRIMARY KEY,
+    driver_id INT,
+    passenger_id INT,
+    start_location VARCHAR(255),
+    end_location VARCHAR(255),
+    distance DECIMAL(5,2),
+    ride_time DECIMAL(5,2),
+    fare DECIMAL(6,2)
+);
+ 
+
+**MongoDB:**
+ 
+db.createCollection("Rides")
+ 
+
+**Problem 27: Insert data into the Rides table / collection**
+
+**MySQL:**
+ 
+INSERT INTO Rides (id, driver_id, passenger_id, start_location, end_location, distance, ride_time, fare)
+VALUES
+    (1, 101, 201, 'Location A', 'Location B', 10.5, 30.5, 25.0),
+    (2, 102, 202, 'Location C', 'Location D', 5.2, 15.0, 12.5),
+    (3, 103, 203, 'Location E', 'Location F', 7.8, 20.0, 18.75),
+    (4, 104, 204, 'Location G', 'Location H', 3.3, 10.5, 9.25),
+    (5, 105, 205, 'Location I', 'Location J', 12.1, 35.0, 30.0);
+ 
+
+**MongoDB:**
+ 
+db.Rides.insertMany([
+  {
+    driver_id: ObjectId("..."),
+    passenger_id: ObjectId("..."),
+    start_location: "Location A",
+    end_location: "Location B",
+    distance: 10.5,
+    ride_time: 30.5,
+    fare: 25.0
+  },
+  {
+    driver_id: ObjectId("..."),
+    passenger_id: ObjectId("..."),
+    start_location: "Location C",
+    end_location: "Location D",
+    distance: 5.2,
+    ride_time: 15.0,
+    fare: 12.5
+  },
+  {
+    driver_id: ObjectId("..."),
+    passenger_id: ObjectId("..."),
+    start_location: "Location E",
+    end_location: "Location F",
+    distance: 7.8,
+    ride_time: 20.0,
+    fare: 18.75
+  },
+  {
+    driver_id: ObjectId("..."),
+    passenger_id: ObjectId("..."),
+    start_location: "Location G",
+    end_location: "Location H",
+    distance: 3.3,
+    ride_time: 10.5,
+    fare: 9.25
+  },
+  {
+    driver_id: ObjectId("..."),
+    passenger_id: ObjectId("..."),
+    start_location: "Location I",
+    end_location: "Location J",
+    distance: 12.1,
+    ride_time: 35.0,
+    fare: 30.0
+  }
+]);
+ 
+
+**Problem 28: Fetch all rides, ordered by fare in descending order**
+
+**MySQL:**
+ 
+SELECT * FROM Rides ORDER BY fare DESC;
+ 
+
+**MongoDB:**
+ 
+db.Rides.find().sort({ fare: -1 });
+ 
+
+**Problem 29: Calculate the total distance and total fare for all rides**
+
+**MySQL:**
+ 
+SELECT SUM(distance) AS total_distance, SUM(fare) AS total_fare FROM Rides;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $group: { _id: null, totalDistance: { $sum: "$distance" }, totalFare: { $sum: "$fare" } } }
+]);
+ 
+**Problem 30: Calculate the average ride_time of all rides**
+
+**MySQL:**
+ 
+SELECT AVG(ride_time) FROM Rides;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $group: { _id: null, averageRideTime: { $avg: "$ride_time" } } }
+]);
+ 
+**Problem 31: Fetch all rides whose start_location or end_location contains 'Downtown'**
+
+**MySQL:**
+ 
+SELECT * FROM Rides WHERE start_location LIKE '%Downtown%' OR end_location LIKE '%Downtown%';
+ 
+
+**MongoDB:**
+ 
+db.Rides.find({ $or: [{ start_location: /Downtown/ }, { end_location: /Downtown/ }] });
+ 
+
+**Problem 32: Count the number of rides for a given driver_id**
+
+**MySQL:**
+ 
+SELECT COUNT(*) FROM Rides WHERE driver_id = 101;
+ 
+
+**MongoDB:**
+ 
+db.Rides.countDocuments({ driver_id: ObjectId("...") });
+ 
+
+**Problem 33: Update the fare of the ride with id 4**
+
+**MySQL:**
+ 
+UPDATE Rides SET fare = 10.0 WHERE id = 4;
+ 
+
+**MongoDB:**
+ 
+db.Rides.updateOne({ id: 4 }, { $set: { fare: 10.0 } });
+ 
+
+**Problem 34: Calculate the total fare for each driver_id**
+
+**MySQL:**
+ 
+SELECT driver_id, SUM(fare) AS total_fare FROM Rides GROUP BY driver_id;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $group: { _id: "$driver_id", totalFare: { $sum: "$fare" } } }
+]);
+ 
+
+**Problem 35: Delete the ride with id 2**
+
+**MySQL:**
+ 
+DELETE FROM Rides WHERE id = 2;
+ 
+
+**MongoDB:**
+ 
+db.Rides.deleteOne({ id: 2 });
+ 
+
+ Certainly! Here are the queries for Set 4 problems, first in MySQL and then in MongoDB:
+
+**Problem 36: Find the ride with the highest and lowest fare**
+
+**MySQL:**
+ 
+SELECT * FROM Rides WHERE fare = (SELECT MAX(fare) FROM Rides);
+SELECT * FROM Rides WHERE fare = (SELECT MIN(fare) FROM Rides);
+ 
+
+**MongoDB:**
+ 
+db.Rides.find().sort({ fare: -1 }).limit(1);
+db.Rides.find().sort({ fare: 1 }).limit(1);
+ 
+
+**Problem 37: Find the average fare and distance for each driver_id**
+
+**MySQL:**
+ 
+SELECT driver_id, AVG(fare) AS avg_fare, AVG(distance) AS avg_distance
+FROM Rides
+GROUP BY driver_id;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $group: { _id: "$driver_id", avgFare: { $avg: "$fare" }, avgDistance: { $avg: "$distance" } } }
+]);
+ 
+
+**Problem 38: Find driver_id that have completed more than 5 rides**
+
+**MySQL:**
+ 
+SELECT driver_id, COUNT(*) AS ride_count
+FROM Rides
+GROUP BY driver_id
+HAVING ride_count > 5;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $group: { _id: "$driver_id", rideCount: { $sum: 1 } } },
+  { $match: { rideCount: { $gt: 5 } } }
+]);
+ 
+**Problem 39: Find the name of the driver with the highest fare**
+
+**MySQL:**
+ 
+SELECT d.name
+FROM Rides r
+INNER JOIN Drivers d ON r.driver_id = d.driver_id
+WHERE r.fare = (SELECT MAX(fare) FROM Rides);
+ 
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $lookup: { from: "Drivers", localField: "driver_id", foreignField: "driver_id", as: "driver" } },
+  { $unwind: "$driver" },
+  { $sort: { fare: -1 } },
+  { $limit: 1 },
+  { $project: { _id: 0, driver_name: "$driver.name" } }
+]);
+ 
+
+**Problem 40: Find the top 3 drivers who have earned the most from fares**
+
+**MySQL:**
+ 
+SELECT driver_id, SUM(fare) AS total_earnings
+FROM Rides
+GROUP BY driver_id
+ORDER BY total_earnings DESC
+LIMIT 3;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $group: { _id: "$driver_id", totalEarnings: { $sum: "$fare" } } },
+  { $sort: { totalEarnings: -1 } },
+  { $limit: 3 }
+]);
+ 
+
+**Problem 41: Find all rides that happened in the last 7 days**
+
+**MySQL:**
+ 
+SELECT *
+FROM Rides
+WHERE ride_date >= CURDATE() - INTERVAL 7 DAY;
+ 
+
+**MongoDB:**
+ 
+db.Rides.find({ ride_date: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } });
+ 
+
+**Problem 42: Find all rides where the end_location is not set**
+
+**MySQL:**
+ 
+SELECT *
+FROM Rides
+WHERE end_location IS NULL OR end_location = '';
+ 
+
+**MongoDB:**
+ 
+db.Rides.find({ $or: [{ end_location: null }, { end_location: "" }] });
+ 
+
+**Problem 43: Calculate the fare per mile for each ride, ordered by fare per mile in descending order**
+
+**MySQL:**
+ 
+SELECT *, fare / distance AS fare_per_mile
+FROM Rides
+ORDER BY fare_per_mile DESC;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  { $addFields: { fare_per_mile: { $divide: ["$fare", "$distance"] } } },
+  { $sort: { fare_per_mile: -1 } }
+]);
+ 
+
+**Problem 44: Return a list of all rides including the driver's name and passenger's name**
+
+**MySQL:**
+ 
+SELECT r.*, d.name AS driver_name, p.name AS passenger_name
+FROM Rides r
+INNER JOIN Drivers d ON r.driver_id = d.driver_id
+INNER JOIN Passengers p ON r.passenger_id = p.passenger_id;
+ 
+
+**MongoDB:**
+ 
+db.Rides.aggregate([
+  {
+    $lookup: {
+      from: "Drivers",
+      localField: "driver_id",
+      foreignField: "driver_id",
+      as: "driver"
+    }
+  },
+  {
+    $lookup: {
+      from: "Passengers",
+      localField: "passenger_id",
+      foreignField: "passenger_id",
+      as: "passenger"
+    }
+  },
+  { $unwind: "$driver" },
+  { $unwind: "$passenger" }
+]);
+ 
+
+**Problem 45: Add a tip field to the Rides table / collection**
+
+**MySQL:**
+ 
+ALTER TABLE Rides ADD COLUMN tip DECIMAL(6,2);
+ 
+
+**MongoDB:**
+ 
+db.Rides.updateMany({}, { $set: { tip: 0.0 } });
+ 
