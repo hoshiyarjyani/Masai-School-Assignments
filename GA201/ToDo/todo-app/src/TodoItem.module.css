@@ -1,0 +1,72 @@
+.todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .viewContainer {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .todoText {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+  }
+  
+  .actionButtons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .editButton,
+  .deleteButton {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .editButton {
+    background-color: #2196f3;
+    margin-right: 8px;
+  }
+  
+  .deleteButton {
+    background-color: #f44336;
+  }
+  
+  .editContainer {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .editInput {
+    flex-grow: 1;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .editButtons {
+    display: flex;
+    align-items: center;
+  }
+  

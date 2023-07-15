@@ -1,0 +1,143 @@
+.todo-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+  padding: 10px 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.edit-container {
+  display: flex;
+  align-items: center;
+}
+
+.edit-input {
+  flex-grow: 1;
+  padding: 6px 10px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-buttons {
+  display: flex;
+}
+
+.save-button,
+.cancel-button {
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button {
+  background-color: #2196f3;
+  margin-right: 8px;
+}
+
+.cancel-button {
+  background-color: #f44336;
+}
+
+.view-container {
+  display: flex;
+  align-items: center;
+}
+
+.todo-text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.action-buttons {
+  display: flex;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  margin-right: 8px;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
