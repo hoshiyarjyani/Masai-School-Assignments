@@ -1,4 +1,5 @@
 class Employee implements Comparable<Employee> {
+    
     private int id;
     private String name;
     private String city;
