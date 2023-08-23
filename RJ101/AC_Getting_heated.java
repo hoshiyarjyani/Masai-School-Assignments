@@ -14,7 +14,6 @@ class Main {
             } else {
                 System.out.println("No AC");
             }
-
         }
     }
 }
