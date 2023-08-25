@@ -1,7 +1,6 @@
 type-1
 1 word- 
 
-
 function runProgram(input){
    // Write Code Here
   n= +input;
@@ -27,6 +26,7 @@ if (process.env.USERNAME === "") {
          process.exit(0);
      });
  }
+
 
 type-2
 3 0
