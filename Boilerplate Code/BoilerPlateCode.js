@@ -1,5 +1,5 @@
 type-1
-1 word- 
+1 word-  
 
 function runProgram(input){
    // Write Code Here
